@@ -6055,6 +6055,8 @@ extraSprites:
       329: Resources/Bigobs/plasma_pistol_master_heat.png # needs 6 indices
       335: Resources/Bigobs/plasma_heavy_master_heat.png # needs 7 indices
       342: Resources/Bigobs/bigob_krieg_heavy_lasgunXIV.png # needs 8 indices
+      350: Resources/Bigobs/BIGOB_COMBIPISTOL_STUBBER_HEAT.png #needs 6 indices
+      356: Resources/Bigobs/BIGOB_SEQUANA_PLASMA_HEAT.png
 
   - type: BIGOBS.PCK                                    #BigOBJECTS #BigOBJECTS #BigOBJECTS #BigOBJECTS #BigOBJECTS
     files:
@@ -6196,6 +6198,10 @@ extraSprites:
       1006: Resources/Bigobs/bigobs_stub_magazine_tracer.png
       1007: Resources/Bigobs/null_sentinelpd_backpack_missile_with_ammo.png
       1008: Resources/Bigobs/BIGOB_MULTILASER_BATTERY_XL.png
+      1009: Resources/Bigobs/BIGOB_AUTOCARBINE_NAVY.png
+      1010: Resources/Bigobs/BIGOB_AUTOSHOTGUN.png
+      1011: Resources/Bigobs/BIGOB_HYBRID_STUBBER.png
+      1012: Resources/Bigobs/BIGOB_JAWSNAPPER_MINI.png
 
 #ROSEMOD
       366: Resources/FOES/366.gif
@@ -6672,6 +6678,12 @@ extraSprites:
       921: Resources/Floorobs/FLOOROB_LASCUTTER.png
       922: Resources/Floorobs/FLOOROB_MULTILASER.png
       923: Resources/Floorobs/FLOOROB_ESCHER_LASGUN.png
+      924: Resources/Floorobs/FLOOROB_AUTOSHOTGUN.png
+      925: Resources/Floorobs/FLOOROB_COMBIPISTOL.png
+      926: Resources/Floorobs/FLOOROB_JAWSNAPPER.png
+      927: Resources/Floorobs/FLOOROB_SEQUANA_PLASMA.png
+      928: Resources/Floorobs/FLOOROB_AUTOCARBINE_NAVY.png
+      929: Resources/Floorobs/FLOOROB_HYBRID_STUBBER.png
 
 
 # ROSEMOD
