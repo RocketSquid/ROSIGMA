@@ -12,7 +12,22 @@ manufacture:
     space: 4
     time: 1000 #significant manufacturing time
     cost: 500000
-
+    
+  - name: STR_GUARDSQUAT_POWER_ARMOR
+    category: STR_ARMOR
+    requires:
+      - STR_GUARD_POWER_ARMOR_RESEARCH 
+    requiredItems:
+      STR_ALIEN_ALLOYS: 40 #Better mechanisms, but it's smaller
+      STR_ELERIUM_115: 20 #Precision squat workmanship keeps fuel use low
+      STR_KILLPOINT_TOKEN: 120 #Token cost the same
+      STR_UFO_CONSTRUCTION: 5 #Super thick plating, only the highest grade ceramite
+    producedItems:
+      STR_GUARDSQUAT_POWER_ARMOR: 1
+    space: 4
+    time: 1500 #Very substantial manufacturing time
+    cost: 500000 #Same monetary cost as the basic one, but ceramite is real pricey.
+    
   - name: STR_BEASTGUARD_HEAVY_ARMOR
     category: STR_ARMOR
     requires:
