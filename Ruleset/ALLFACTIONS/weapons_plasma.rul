@@ -93,6 +93,27 @@ items:
     armor: 100
     costSell: 45000
 
+  - type: STR_PLASMA_RIFLE_SEQUANA
+    categories: [STR_CAT_PLASMA]
+    #requires: #Production requirements vary between factions
+    #  - STR_PLASMA_RIFLE
+    size: 0.2
+    costSell: 80500 #Same as standard plasma rifle for now
+    weight: 25 #More coils
+    #bigSprite: handled in plasma script
+    handSprite: 
+    bulletSprite: { mod: 40k, index: 11 }
+    fireSound: { mod: 40k, index: 18 } 
+    compatibleAmmo:
+      - STR_PLASMA_RIFLE_CLIP
+    battleType: 1
+    twoHanded: true
+    invWidth: 1
+    invHeight: 3
+    armor: 200
+    attraction: 1
+    listOrder: 11450 #Don't know if this is allowed
+
 
   - type: STR_BARRAGE_PLASMA #                        11610
     categories: [STR_CAT_PLASMA, STR_CAT_DEVASTATOR, STR_CAT_CHAOS]
