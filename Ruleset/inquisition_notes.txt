@@ -11,16 +11,25 @@ Choice of chamber militant:
    
 Soldier types for rejects route:
  - Scum: recruited in large groups, bad armor, surprisingly good melee, TU, and accuracy, but noodle armed
+   "A sweep of local prisons has brought in a sizable crop of violent criminals."
  - Gangers: more elite than scum, mobility emphasis (dodge chances, etc), chance to use necromunda styles.
- - Desperado: Hero tier, great TUs, great reactions, good shooting accuracy, very high dodge chance, investigate possibility of quickdraw script (shoot enemy before they can shoot you)
+   "The local gangs have produced a number of skilled fighters, their reflexes honed by years on the streets"
+ - Desperado: Hero tier, great TUs, great reactions, good shooting accuracy, very high dodge chance, investigate possibility of quickdraw script (shoot enemy before they can shoot you). Have a built-in pistol (as extra item)
+   "Desperados are skilled gunslingers 
  - Penal soldiers: same as usual, recruited in large groups, can be promoted to guardsmen
  - PDF soldiers: Same as usual, can be upgraded to guardsmen
  - Guardsmen: same as usual, promoted to veterans
  - Veterans: same as usual, good equipment and whatnot.
  - Beastmen: Not the same as beastguards (less disciplined+worse armor), get promoted to beastguards
+   "With few other places to go, beastmen may end up in the employ of the inquisition"
  - Beastguards: same as usual
  - Techgors: same as usual
  - Hereteks: Recruited in small numbers, very elite. Maybe lock behind radical
  - Enforcer: Not a full on arbites, still decent because early carapace
  - Arbitrator, judge, etc
  - Mutant: Stats start low but have very high caps. 
+   "A sweep of local hive warrens has yielded a number of mutants who may now be put to the task of earning the emperor's forgiveness"
+ - Redemptionist: enthusiastic but bad aim
+   "Our agents successfully contacted local redemption cults. What their sycophants lack in ability they make up for in raw, fanatical devotion"
+ - Zealot: upgraded redemptionist, good at melee
+ - Wyrdvane psyker: weaker version of sanctioned psyker, can be upgraded
