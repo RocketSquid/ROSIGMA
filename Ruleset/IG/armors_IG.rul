@@ -2443,7 +2443,92 @@ armors:
        bravery: 10 #Feeling a lot braver in Power armor
        strength: 10 #+10 boost, does not have full PA strength boost built in. Gameplay wise, needs to be good enough to carry Rotor Cannon etc
 
-
+  - type: STR_GUARDSQUAT_POWER_ARMOR #Blows basic guard PA out of the water. Practically mastercrafted and priced to match.
+    visibilityAtDay: 35 #Abhuman malus
+    visibilityAtDark: 25 #Abhuman bonus
+    heatVision: 20 #same as Chimera or Taurox
+    antiCamouflageAtDay: 4 #equivalent to Scion gear
+    antiCamouflageAtDark: 4 #equivalent to Scion gear
+    personalLight: 6
+    #tags:
+      #ARMOR_ENERGY_SHIELD_HP_PER_TURN: 4 #40 hp shields
+      #ARMOR_ENERGY_SHIELD_DECAY: 10
+    spriteSheet: IG_POWER_ARMOR_BS.PCK
+    customArmorPreviewIndex: 552 
+    storeItem: STR_GUARDSQUAT_POWER_ARMOR
+    corpseBattle:
+      - STR_GUARD_POWER_ARMOR_CORPSE_GEO
+    frontArmor: 115 #Not quite space marine grade
+    sideArmor: 105 #+25 to side armor too, built squat tough
+    rearArmor: 80 #Extra back armor on top of the +25 because squats are still slow
+    underArmor: 75 #
+    damageModifier: #POWER ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 0.6 #FLAMES Hazard protected
+      - 0.8 #HE Hazard protected
+      - 0.8 #LASCANON
+      - 1.1 #PLASMA
+      - 1.0 #STUN
+      - 1.0 #MELEE
+      - 0.8 #ACID Hazard protected
+      - 0.0 #SMOKE
+      - 0.2 #IMPACT
+      - 1.0 #MELTA
+    loftempsSet: [ 4 ]
+    units:
+      - STR_GUARD_SQUAT
+    stats:
+       tu: -5 #Customized power armor interface. Gameplay wise, squats are already slow
+       stamina: 30 #Relentless
+       firing: 20 #Highly advanced targeting system
+       reactions: -15 #Too stoic for their own good
+       bravery: 20 #Absolute confidence in their craftsmanship
+       strength: 15 #Improved
+  - type: STR_GUARDSQUAT_EXO_DRILL_ARMOR #Superheavy breaching armor
+    visibilityAtDay: 35 #Abhuman malus
+    visibilityAtDark: 30 #Abhuman bonus + Tunnel gear
+    heatVision: 20 #same as Chimera or Taurox
+    antiCamouflageAtDay: 4 #equivalent to Scion gear
+    antiCamouflageAtDark: 6 #Tunnel fighting
+    personalLight: 6
+    #tags:
+      #ARMOR_ENERGY_SHIELD_HP_PER_TURN: 4 #40 hp shields
+      #ARMOR_ENERGY_SHIELD_DECAY: 10
+    spriteSheet: IG_POWER_ARMOR_BS.PCK
+    customArmorPreviewIndex: 552 
+    storeItem: STR_GUARDSQUAT_POWER_ARMOR
+    corpseBattle:
+      - STR_GUARD_POWER_ARMOR_CORPSE_GEO
+    frontArmor: 130 #Mountain of ceramite
+    sideArmor: 110 #Very tough
+    rearArmor: 80 #Weak point, but only relatively speaking
+    underArmor: 90 #Vibration dampening and thick padding
+    damageModifier: #POWER ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 0.6 #FLAMES Hazard protected
+      - 0.6 #HE Extra HE protection needed in the mines
+      - 0.8 #LASCANON
+      - 1.1 #PLASMA
+      - 1.0 #STUN
+      - 1.0 #MELEE
+      - 0.6 #ACID Hazard protected
+      - 0.0 #SMOKE
+      - 0.2 #IMPACT
+      - 1.0 #MELTA
+    loftempsSet: [ 4 ]
+    builtInWeapons:
+      - STR_SQUAT_SEISMIC_BLASTER
+    units:
+      - STR_GUARD_SQUAT
+    stats:
+       tu: -15 #Unbelievably heavy 
+       stamina: 30 #Relentless
+       reactions: -10 #Breaching specialization
+       bravery: 30 #Only way to be safer would be to stay at home
+       strength: 15 #Improved
+    
   - type: STR_CHIMEDON_ARMOR
     allowsMoving: false
     spriteSheet: CHIMERON_TURRET_BS.PCK
