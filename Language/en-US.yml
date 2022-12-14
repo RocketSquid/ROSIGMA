@@ -2506,6 +2506,24 @@ en-US:
   STR_LONG_RIFLE_GUARD: "Long Rifle"
   STR_LONGRIFLE_CODEX: "{NEWLINE} The Long Rifle is a light-weight sniper rifle employed by the Guard. Certain guardsmen, particularly abhumans, prefer it over the long-las. Although more skill is required to maintain accuracy at long ranges compared to the long-las, its proponents contend that the increased stopping power makes it an obvious choice."
 
+  STR_POWERKNUCKLE: "Power Knuckle"
+  STR_POWERKNUCKLE_CODEX: "{NEWLINE} The power knuckle, also known as a jawsnapper knuckleduster, is an unconventional but remarkably simple power weapon built around a set of brass knuckles. A power pack, typically worn on the wrist, charges an energy field which violently disrupts anything between the user's fist and the target's face."
+
+  STR_AUTOSHOTGUN: "Automatic Shotgun"
+  STR_AUTOSHOTGUN_CODEX: "{NEWLINE} The Hive-Hammer Automatic Shotgun is a deadly close-quarters weapon which is sometimes considered a smaller relative of the ripper gun. It fires standard shotgun ammunition from an eight-round box mag or a 32-round drum mag. Its enormous recoil and poor range prevent it from seeing wider deployment."
+
+  STR_PLASMA_RIFLE_SEQUANA: "Sequana Plasma Rifle"
+  STR_PLASMA_RIFLE_SEQUANA_CODEX: "{NEWLINE} The Sequana sub-type designates plasma rifles built with additional focusing coils to increase plasma cohesion and reduce spread at longer ranges, at the cost of a sluggish power cycle which reduces firing speed. Because of this, the weapon is issued to specialist guard and PDF squads, and sometimes used in place of a proper AMR."
+
+  STR_COMBIPISTOL_STUBPLASMA: "Combi-pistol"
+  STR_COMBIPISTOL_STUBPLASMA_CODEX: "{NEWLINE} More formally the combi-plasma pistol/stubber, the combipistol is a plasma pistol which has had certain redundant components removed to accomodate a simple stub gun. This allows it to be used against lightly-armored enemies without depleting the plasma flask or placing strain on the cooling systems."
+
+  STR_AUTOCARBINE_NAVY: "High-grade Autocarbine"
+  STR_AUTOCARBINE_NAVY_CODEX: "{NEWLINE} Barely larger than a pistol, this autocarbine fires .45 caliber ammo in controlled bursts and is equipped with a folding stock to manage recoil. Though originally intended for naval boarding operations, it also sees use wherever a full-size autogun would be too heavy."
+  
+  
+
+
   STR_STORMTROOPER_OFFICER_CARAPACE_ARMOR: "Adv. Officer Carapace"
   STR_STORMTROOPER_OFFICER_CARAPACE_ARMOR_HELLGUN: "Adv. Off. Carapace/Hellgun"
   STR_STORMTROOPER_OFFICER_CARAPACE_ARMOR_VOLLEYGUN: "Adv. Off. Carapace/Volleygun"
@@ -2696,6 +2714,8 @@ en-US:
   STR_BOLTER_UMBRA_UFOPEDIA: "{NEWLINE} The Umbra Pattern Bolter is one of the earliest patterns of Bolter and was produced in large quantities early in the Great Crusade. This reliable pattern of Boltgun have seen widespread use and is still manufactured by several forges, making it one of the more available patterns."
   STR_BOLTER_LIGHT_UMBRA_UNDERSLUNG: "Combi-Bolter Umbra /GL"
   STR_BOLTER_LIGHT_UMBRA_UNDERSLUNG_CODEX: "{NEWLINE} The Umbra Pattern Bolter fitted with a underslung 40mm grenade launcher that can use the common guard 40mm grenades and shotgun rounds. Incendiary, Krak and Melta grenades as well as slug and buckshot shells."
+  STR_BOLTER_HEAVY_SOLAR: "Heavy Bolter Solar Pattern"
+  STR_BOLTER_HEAVY_SOLAR_CODEX: "{NEWLINE} An ancient design produced in select manufactoriums, the Solar-pattern heavy bolter uses high-quality components to improve heat management and reliability. This allows it to be fired more rapidly and accurately than other heavy bolters, making it as popular with wealthy individuals as it is with the guardsmen lucky enough to be issued it."
 
   STR_BOLTER_LIGHT_SOLO: "Light Bolter Solo Pattern"
   STR_BOLTER_LIGHT_SOLO_DMR: "Light Bolter Scoped Solo Pattern"
@@ -2708,6 +2728,8 @@ en-US:
   STR_BOLTER_SOLO_DMR_UFOPEDIA: "{NEWLINE} Perinetus Pattern Solo Mark II Scoped variants enhances the weapon's range and accuracy. Made to be used by normal humans, it is modified to produce less recoil at the expense of automatic fire modes. Popular with sharpshooters within both Guard and PDF, the Solo Pattern finds widespread use. {NEWLINE}{NEWLINE}Recoil: {ALT}20"
   STR_BOLTER_SOLO_SHORT_UFOPEDIA: "{NEWLINE} Perinetus Pattern Solo Mark II is unsophisticated and lacks the capability for autofire, allowing it only singleshot firemode. This is made up by the weapon's range, accuracy and reliability in adverse conditions. Some Guardsmen were unhappy with the weight and started modifying it accordingly. {NEWLINE}{NEWLINE}Recoil: {ALT}20"
 
+  STR_BOLTER_LIGHT_GOLIATH: "Light Bolter Goliath Patttern"
+  STR_BOLTER_GOLIATH_UFOPEDIA: "{NEWLINE} A rapid-firing relative of the perinetus pattern, the goliath pattern is meant for use by abhumans with enhanced strength, such as beastmen or its namesake goliaths. Models pulled from storage or bought on the open market often are covered with rust from decades of bad storage, but still work like new. {NEWLINE}{NEWLINE}Recoil: {ALT}35"
   STR_BOLTER_LIGHT_LMG: "Light Bolter Accatran"
   STR_LIGHT_BOLTER_AMMO_BELT: "Light Bolter Belt"
   STR_LIGHT_BOLTER_AMMO_BELT_PEN: "Light Bolter Kraken Belt"
