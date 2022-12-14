@@ -331,7 +331,279 @@ armors:
     specialWeapon: STR_GUARD_MEDI_KIT
     builtInWeapons:
       - INV_NULL_MEDI_KIT
-
+  - type: STR_FELINIDGUARD_CARAPACE_SENSORS
+    visibilityAtDay: 45 #Advanced optics
+    visibilityAtDark: 45 #Advanced optics
+    antiCamouflageAtDay: 10 #Multi-spectral scanning
+    antiCamouflageAtDark: 10 #Felinid bonus +3
+    psiVision: 3 #I hear them breathing!
+    customArmorPreviewIndex: 546
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 96, 96, 96, 160, 160, 163, 163, 96, 96, 96, 96, 96, 96, 96, 96, 160, 160, 163, 163] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    spriteHairGroup: 9
+    spriteHairColor: [144, 144, 164, 164, 245, 245, 166, 166, 96, 164, 96, 96, 144, 144, 164, 164, 245, 245, 166, 166] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    spriteSheet: STORMTROOPER_CARAPACE.PCK
+    spriteInv: STORMTROOPER_CARAPACE
+    storeItem: STR_FELINIDGUARD_CARAPACE_SENSORS
+    corpseBattle:
+      - STR_GUARDH_CORPSE
+    frontArmor: 70
+    sideArmor: 60
+    rearArmor: 30
+    underArmor: 40 #felenid
+    drawingRoutine: 0
+    weight: 15
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.2 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.2 #STUN, increased vulnerability
+      - 1.1 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    units:
+      - STR_GUARD_FELINID
+    stats:
+       tu: -5
+       stamina: -15
+       strength: 5
+       bravery: 10 #always multiples of 10
+    loftempsSet: [ 2 ] #Felenid
+    specialWeapon: STR_FELINID_SCANNER #Special motion scanner that takes less TU and doesn't use a hand slot
+- type: STR_FELINIDGUARD_ADVANCED_CARAPACE
+    visibilityAtDay: 40 #Built-in optics
+    visibilityAtDark: 40 #Optics enhance existing night vision
+    antiCamouflageAtDay: 6 #Advanced carapace
+    antiCamouflageAtDark: 9 #Felinid bonus +3, Advanced carapace also +3
+    customArmorPreviewIndex: 546
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 96, 96, 96, 160, 160, 163, 163, 96, 96, 96, 96, 96, 96, 96, 96, 160, 160, 163, 163] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    spriteHairGroup: 9
+    spriteHairColor: [144, 144, 164, 164, 245, 245, 166, 166, 96, 164, 96, 96, 144, 144, 164, 164, 245, 245, 166, 166] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    spriteSheet: STORMTROOPER_CARAPACE.PCK
+    spriteInv: STORMTROOPER_CARAPACE
+    storeItem: STR_FELINIDGUARD_CARAPACE_ARMOR #This might need to be none?
+    storeItem: STR_FELINIDGUARD_ADVANCED_CARAPACE #This might need to be none?
+    corpseBattle:
+      - STR_GUARDH_CORPSE
+    frontArmor: 80
+    sideArmor: 60
+    rearArmor: 40
+    underArmor: 50 #felenid
+    drawingRoutine: 0
+    weight: 15
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.2 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.1 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    units:
+      - STR_GUARD_FELINID_VETERAN
+    stats:
+       stamina: -10 #more used to moving in armor. CQC armor gives better melee
+       strength: 5
+       bravery: 20 #always multiples of 10
+    loftempsSet: [ 2 ] #Felenid
+    specialWeapon: STR_FELINIED_CLAWS
+  - type: STR_FELINIDGUARD_MEDIC_ADVANCED_CARAPACE
+    visibilityAtDay: 40 #Advanced
+    visibilityAtDark: 40 #Felinid night vision
+    antiCamouflageAtDay: 6
+    antiCamouflageAtDark: 9 #Felinid bonus +3
+    spriteSheet: MEDIC_CARAPACE.PCK
+    spriteInv: MEDIC_CARAPACE
+    customArmorPreviewIndex: 548
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 96, 96, 96, 160, 160, 163, 163, 96, 96, 96, 96, 96, 96, 96, 96, 160, 160, 163, 163] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    spriteHairGroup: 9
+    spriteHairColor: [144, 144, 164, 164, 245, 245, 166, 166, 96, 164, 96, 96, 144, 144, 164, 164, 245, 245, 166, 166] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    corpseBattle:
+      - STR_GUARDH_CORPSE
+    storeItem: STR_FELINIDGUARD_MEDIC_CARAPACE_ARMOR
+    frontArmor: 80
+    sideArmor: 60
+    rearArmor: 50
+    underArmor: 60
+    weight: 15 #Slightly lighter
+    stats:
+       stamina: -10
+       strength: 5
+       bravery: 20 #always multiples of 10
+    drawingRoutine: 0
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.2 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.1 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    units:
+      - STR_GUARD_FELINID_VETERAN
+    loftempsSet: [ 2 ]
+    specialWeapon: STR_GUARD_MEDI_KIT
+    builtInWeapons:
+      - INV_NULL_MEDI_KIT
+      
+  - type: STR_FELINIDGUARD_ADVANCED_CQC
+    visibilityAtDay: 40 #Built-in optics
+    visibilityAtDark: 40 #Optics enhance existing night vision
+    antiCamouflageAtDay: 6 #Advanced carapace
+    antiCamouflageAtDark: 9 #Felinid bonus +3, Advanced carapace also +3
+    customArmorPreviewIndex: 546
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 96, 96, 96, 160, 160, 163, 163, 96, 96, 96, 96, 96, 96, 96, 96, 160, 160, 163, 163] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    spriteHairGroup: 9
+    spriteHairColor: [144, 144, 164, 164, 245, 245, 166, 166, 96, 164, 96, 96, 144, 144, 164, 164, 245, 245, 166, 166] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    spriteSheet: STORMTROOPER_CARAPACE.PCK
+    spriteInv: STORMTROOPER_CARAPACE
+    storeItem: STR_FELINIDGUARD_ADVANCED_CQC
+    corpseBattle:
+      - STR_GUARDH_CORPSE
+    frontArmor: 70 #lighter armor
+    sideArmor: 60
+    rearArmor: 30
+    underArmor: 50 #felenid
+    drawingRoutine: 0
+    weight: 15
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.2 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.1 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    units:
+      - STR_GUARD_FELINID_VETERAN
+    stats:
+       tu: 10 #Cheetah speed
+       stamina: 20 #well-fitted, plus enhanced legs
+       strength: 5
+       melee: 20
+       bravery: 20 #always multiples of 10
+    loftempsSet: [ 2 ] 
+    specialWeapon: STR_FELINID_POWER_CLAWS #energy-enhanced claws
+    builtInWeapons: #Gotta make room for the sprinty legs
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+    #Dodge chance increased to 15%
+      
+- type: STR_FELINIDGUARD_ADVANCED_SENSORS
+    visibilityAtDay: 50 #Advanced optics and scanners, but not as good as a diviner
+    visibilityAtDark: 50 #Optics enhance existing night vision
+    antiCamouflageAtDay: 16 #Scanners further enhanced
+    antiCamouflageAtDark: 16 #Scanners further enhanced
+    psiVision: 8 #Advanced high-power auspex scanner can detect stationary targets and hooks directly into the HUD
+    customArmorPreviewIndex: 546
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 96, 96, 96, 160, 160, 163, 163, 96, 96, 96, 96, 96, 96, 96, 96, 160, 160, 163, 163] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    spriteHairGroup: 9
+    spriteHairColor: [144, 144, 164, 164, 245, 245, 166, 166, 96, 164, 96, 96, 144, 144, 164, 164, 245, 245, 166, 166] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    spriteSheet: STORMTROOPER_CARAPACE.PCK
+    spriteInv: STORMTROOPER_CARAPACE
+    storeItem: STR_FELINIDGUARD_ADVANCED_SENSORS
+    corpseBattle:
+      - STR_GUARDH_CORPSE
+    frontArmor: 80
+    sideArmor: 60
+    rearArmor: 40
+    underArmor: 50 #felenid
+    drawingRoutine: 0
+    weight: 20 #Lot of sensor equipment
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.2 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.2 #STUN, flashbangs are extra effective against someone with night vision and sensitive hearing
+      - 1.1 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    units:
+      - STR_GUARD_FELINID_VETERAN
+    stats:
+       tu: -5
+       stamina: -15 #more used to moving in armor, but it's heavier.
+       strength: 5
+       bravery: 20 #always multiples of 10
+    loftempsSet: [ 2 ] #Felenid
+    specialWeapon: STR_FELINIED_CLAWS
+    builtInWeapons:
+      - INV_NULL_AUSPEX #Sorry, backpack is full of fancy equipment now.
+      
+  - type: STR_FELINIDGUARD_FLYING_CARAPACE
+    visibilityAtDay: 40 #Abhuman -5
+    visibilityAtDark: 40 #Felinid night vision
+    antiCamouflageAtDay: 6
+    antiCamouflageAtDark: 9 #Felinid bonus +3
+    customArmorPreviewIndex: 546
+    spriteFaceGroup: 6
+    spriteFaceColor: [96, 96, 96, 96, 160, 160, 163, 163, 96, 96, 96, 96, 96, 96, 96, 96, 160, 160, 163, 163] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    spriteHairGroup: 9
+    spriteHairColor: [144, 144, 164, 164, 245, 245, 166, 166, 96, 164, 96, 96, 144, 144, 164, 164, 245, 245, 166, 166] #M0 F0 M1 F1 M2 F2 M3 F3 M4 F4 M5 F5 M6 F6 M7 F7 M8 F8 M9 F9
+    spriteSheet: STORMTROOPER_CARAPACE.PCK
+    spriteInv: STORMTROOPER_CARAPACE
+    storeItem: STR_FELINIDGUARD_CARAPACE_FLIGHT
+    corpseBattle:
+      - STR_GUARDH_CORPSE
+    frontArmor: 70 #Same protection as standard carapace despite being advanced, had to shave off weight somehow
+    sideArmor: 60
+    rearArmor: 50
+    underArmor: 50 #felenid
+    drawingRoutine: 0
+    weight: 15
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.2 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.1 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    units:
+      - STR_GUARD_FELINID_VETERAN
+    stats:
+       tu: -5
+       stamina: -15
+       strength: 5
+       bravery: 10 #always multiples of 10
+    loftempsSet: [ 2 ] #Felenid
+    specialWeapon: STR_FELINIED_CLAWS #Needs to be jump claws
+    #Dodge chance in-flight is lower.
+    
   - &STR_GUARD_ARMOR_CARAPACE # DAMAGE + STATS    
     type: STR_GUARD_ARMORH_UC
     visibilityAtDay: 40
