@@ -241,6 +241,16 @@ research:
 # Manufacture Hellgun
 # Research Volleygun
 
+  - name: STR_ABHUMAN_VETERANS
+    dependencies:
+      - STR_IMPERIAL_GUARD_OPERATIONS
+      - STR_GENERALLOCK
+# unlocks
+# Transformation Felinid Veteran
+# Transformation Techgor (eventually)
+# Transformation BONE Ogryn
+# Manufacture Felinid CQC armor
+
   - name: STR_STORMTROOPER_REQUISITION
     cost: 0
     points: 0
