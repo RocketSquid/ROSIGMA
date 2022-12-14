@@ -919,6 +919,193 @@ armors:
     loftempsSet: [ 3 ]
     specialWeapon: STR_BAYONET
 
+#Techgor Armors
+  - &STR_TECHGOR_CARAPACE
+    type: STR_TECHGOR
+    visibilityAtDay: 35 #abhuman squat malus
+    visibilityAtDark: 30 #abhuman squat bonus
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    heatVision: 20
+    customArmorPreviewIndex: 543
+    spriteSheet: GUARDBEASTMAN_CARAPACE_BS.PCK 
+    spriteInv: BCA_33  
+    storeItem: STR_NONE
+    corpseBattle:
+      - STR_TECHGOR_CORPSE 
+    frontArmor: 75 #5 assault armor bonus
+    sideArmor: 65 #5 assault carapace armor bonus 
+    lefArmorDiff: 10 #Robotic arm can take more punishment
+    rearArmor: 20 #10 assault malus
+    underArmor: 20 
+    drawingRoutine: 0
+    zombiImmune: true
+    weight: 15
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.15 #FLAMES 20% BEASTMAN MALUS, 5% cyborg bonus
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 0.9 #PLASMA
+      - 0.85 #STUN 10% BEASTMAN BONUS, 5% cyborg bonus
+      - 0.9 #MELEE 10% BEASTMAN BONUS
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.1 #MELTA
+    units:
+      - STR_GUARD_TECHGOR
+    stats:
+       bravery: 30 #FOR THE OMNISSIAH!
+       strength: 20 #Serious augmentics
+       tu: 10 #Nerves of steel
+       stamina: 20 
+       health: 10
+       reactions: 5
+       melee: 5
+       firing: 5
+       throwing: 5
+    loftempsSet: [ 4 ] #big targets
+    
+  - type: STR_TECHGOR
+    specialWeapon: STR_SERVO_FIST
+
+  - type: STR_TECHGOR_BOLTER
+    refNode: *STR_TECHGOR_CARAPACE
+    builtInWeapons:
+      - STR_HEAVY_BOLTER_AUGMENTIC
+
+  - type: STR_TECHGOR_MISSILE
+    refNode: *STR_TECHGOR_CARAPACE
+    builtInWeapons:
+      - STR_MISSILE_POD_AUGMENTIC
+
+  - type: STR_TECHGOR_SUPPORT
+    refNode: *STR_TECHGOR_CARAPACE
+    stats:
+       tu: 20 #More for healing
+       firing: -5 #Worse combat skills
+    specialWeapon: STR_TECHGOR_DENDRITE
+    builtInWeapons:
+      - STR_TECHGOR_SERVOARM
+      - INV_NULL_MEDISPINE
+      
+  - type: STR_TECHGOR_CLAW
+    refNode: *STR_TECHGOR_CARAPACE
+    stats:
+       firing: -5
+       melee: 15
+    builtInWeapons:
+      - STR_TECHGOR_POWER_CLAW
+      
+  - &STR_TECHGOR_HEAVY_ARMOR
+    type: STR_TECHGOR_HEAVY
+    visibilityAtDay: 35 #abhuman 
+    visibilityAtDark: 30 #abhuman 
+    antiCamouflageAtDay: 6 #´+1 ceramite tier
+    antiCamouflageAtDark: 6 # +1 ceramite tier
+    heatVision: 20
+    customArmorPreviewIndex: 576 
+    spriteFaceGroup: 6
+    spriteSheet: GUARDBEASTMAN_HEAVY_BS.PCK
+    spriteInv: BHA_33 
+    storeItem: STR_BEASTGUARD_HEAVY_ARMOR #create storeitem
+    corpseBattle:
+      - STR_BEASTGUARD_CORPSE 
+    frontArmor: 110 #Near power armor effectiveness
+    sideArmor: 95 #Near power armor effectiveness
+    leftArmorDiff: 10 #Metal arm
+    rearArmor: 50 #Weakness
+    underArmor: 40 #+20 from carapace
+    drawingRoutine: 0
+    zombiImmune: true
+    weight: 20
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 0.9 #AP 10% Heavy Ceramite bonus
+      - 1.1 #FLAMES 10% BEASTMAN MALUS
+      - 0.8 #HE 20% Heavy Ceramite bonus
+      - 0.8 #LASCANON
+      - 0.9 #PLASMA
+      - 0.85 #STUN 10% BEASTMAN BONUS 5% cyborg bonus
+      - 0.9 #MELEE 10% BEASTMAN BONUS
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.1 #MELTA
+    units:
+      - STR_GUARD_TECHGOR
+    stats:
+       bravery: 30 
+       strength: 20
+       stamina: 10
+    loftempsSet: [ 4 ] #big targets
+    
+  - type: STR_TECHGOR_HEAVY
+    specialWeapon: STR_TECHGOR_FIST
+    
+  - type: STR_TECHGOR_HEAVY_FLAMER
+    visibilityAtDay: 35 #abhuman 
+    visibilityAtDark: 30 #abhuman 
+    antiCamouflageAtDay: 6 #´+1 ceramite tier
+    antiCamouflageAtDark: 6 # +1 ceramite tier
+    heatVision: 20
+    customArmorPreviewIndex: 576 
+    spriteFaceGroup: 6
+    spriteSheet: GUARDBEASTMAN_HEAVY_BS.PCK
+    spriteInv: BHA_33 
+    storeItem: STR_BEASTGUARD_HEAVY_ARMOR #create storeitem
+    corpseBattle:
+      - STR_BEASTGUARD_CORPSE 
+    frontArmor: 110 #Near power armor effectiveness
+    sideArmor: 95 #Near power armor effectiveness
+    leftArmorDiff: 10 #Metal arm
+    rearArmor: 50 #Weakness
+    underArmor: 40 #+20 from carapace
+    drawingRoutine: 0
+    zombiImmune: true
+    weight: 30
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 0.9 #AP 10% Heavy Ceramite bonus
+      - 0.4 #FLAMES Maximum flame protection
+      - 0.8 #HE 20% Heavy Ceramite bonus
+      - 0.8 #LASCANON
+      - 0.9 #PLASMA
+      - 0.85 #STUN 10% BEASTMAN BONUS 5% cyborg bonus
+      - 0.9 #MELEE 10% BEASTMAN BONUS
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.1 #MELTA 
+    units:
+      - STR_GUARD_TECHGOR
+    stats:
+       bravery: 30 
+       strength: 10
+       stamina: -5 #Incredibly heavy
+       reactions: -5
+       tu: -5
+       melee: 10
+       firing: -10 #Doesn't matter much for the flamer
+    loftempsSet: [ 4 ] #big targets
+    builtInWeapons:
+      - STR_AUGMENTIC_FLAMER
+      - INV_NULL_FUELTANK
+    
+  - type: STR_TECHGOR_HEAVY_MULTILASER
+    refNode: *STR_TECHGOR_HEAVY
+    builtInWeapons:
+      - STR_AUGMENTIC_MULTILASER
+      - INV_NULL_POWERPACK
+      
+  - type: STR_TECHGOR_HEAVY_PLASMA
+    refNode: *STR_TECHGOR_HEAVY
+    builtInWeapons:
+      - STR_AUGMENTIC_PLASMA
+      - INV_NULL_PLASMAPACK
+      
 #IG Regular armors
   - &STR_GUARD_ARMOR_PILOT_DAMAGE
     type: STR_GUARD_ARMORP_UC #DR10 GUARD PILOT
