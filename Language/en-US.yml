@@ -2804,8 +2804,7 @@ en-US:
   STR_SQUAT_GUARDSMEN: "Squat Guard Recruitment"
   STR_SQUAT_FLAK_ARMOR_UFOPAEDIA: "{NEWLINE} The Squat are abhumans from high gravity worlds. Most Squat freehold worlds were devoured by the Tyranids, with survivors and refugees spreading throughout the Imperium. Short, stocky, tough and long-lived, they make for hardy soldiers, stubbornly refusing to yield ground in combat."
   STR_SQUAT_CARAPACE_ARMOR_UFOPAEDIA: "{NEWLINE} Squat armor is finely crafted and augmented by the Squat guardsmen themselves without increasing fatigue, they are capable of carrying heavier layered plating than the average Guardsman."
-  STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on the tradition of exo-armor, squat power armor has been modified and tuned up to grant almost as much protection as space marine armor, while remaining surprisingly mobile.
-  STR_BEASTMEN_GUARDSMEN_SUPPORT: "Requisition Beastmen Guard"
+STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on their long cultural tradition of exo-armor, squats modify and tune up their issued power armor until it grants almost as much protection as space marine armor, while remaining surprisingly mobile."  STR_BEASTMEN_GUARDSMEN_SUPPORT: "Requisition Beastmen Guard"
   STR_GUARD_BEASTMAN: "Beastman"
   STR_BEASTGUARD_FLAK_ARMOR: "Beastmen Flak"
   STR_BEASTGUARD_FLAK_ARMOR_MEDIC: "Beastman Medic Armor"
@@ -2843,8 +2842,7 @@ en-US:
   STR_FELINIDGUARD_POWER_ARMOR_CODEX: "{NEWLINE} The Felinid Breachers have long made use of improvised and reinforced Void Armors, getting what they need from the Squats or other vendors off-base. They are keen to make it look approved and official, with a new paintjob."
   STR_FELINIDGUARD_CARPACE_ADVANCED_CODEX: "{NEWLINE} Felinids who show exceptional talent in battle may be issued stormtrooper-grade equipment, generally by officers with illegible signatures. Ever proactive, they've even been known to personally deliver the requisition paperwork."
   STR_FELINIDGUARD_CARAPACE_SENSOR_CODEX: "{NEWLINE} In order to take full advantage of their keen senses, some felinids are granted auspex equipment and improved optics, allowing them to locate, if not hit, the enemy at great range or through walls."
-  STR_FELINIDGUARD_ADVANCED_SENSOR_CODEX: "{NEWLINE} Felinid veterans posess the training necessary to use more advanced auspex equipment, which integrates surface-penetrating sensor data into the user's HUD, effectively allowing them to see through walls."
-  STR_FELINIDGUARD_ADVANCED_CQC_CODEX: "{NEWLINE} Felinids with a particular aptitude for close combat are granted a distant relative of power armor, with quick-acting electro-muscles in the legs and a set of disruption-field-augmented claws."
+  STR_FELINIDGUARD_ADVANCED_SENSOR_CODEX: "{NEWLINE} Felinid veterans can make use of advanced Auspex arrays which would normally require a connected cogitator system. Against the combination of advanced technology and a hunter's instinct, an elevated heart rate may as well be a tracking beacon."  STR_FELINIDGUARD_ADVANCED_CQC_CODEX: "{NEWLINE} Felinids with a particular aptitude for close combat are granted a distant relative of power armor, with quick-acting electro-muscles in the legs and a set of disruption-field-augmented claws."
   STR_FELINIDGUARD_ADVANCED_MEDIC_CODEX: "{NEWLINE} Felinid medics who've sufficiently advanced their skills, medical and social, will make use of borrowed or donated stormtrooper equipment to improve survivability and ability to administer care under fire."
   STR_FELINID_JUMP_CARAPACE_CODEX: "{NEWLINE} Felinid drop troops with more experience may choose to use jump carapace similar to that used by stormtroopers and Harakoni warhawks, sacrificing agility for protection."
 
