@@ -1,0 +1,26 @@
+Revamp/upgrade to inquisition faction
+Choice of chamber militant:
+1. Grey knights, malleus campaign, plays similar to current
+   "The mighty Grey Knights are the imperium's premier daemon hunters, assisting the ordo malleus as their chamber militant"
+2. Deathwatch, xenos campaign, replace grey knights with more conventional (but still elite) space marines.
+   "The deathwatch are an elite space marine task force formed of brothers from numerous chapters and trained to fight the foul aliens alongside the ordo xenos"
+3. Sisters, hereticus campaign, again, replace grey knights in current with sisters of battle units
+   "The sisters of battle are the chamber militant for the ordo hereticus, aiding them in hunting the witch and the heretic"
+4. Rejects, in the vein of darktide. Weak, replaceable units, recruited in large groups, but the survivors will tend to get real buff.
+   "Sometimes, only the weak have the strength to do what is necessary. The rejected and the replaceable, from ganger scum to faceless soldiers, serve the inquisition and become heroes, should they survive."
+   
+Soldier types for rejects route:
+ - Scum: recruited in large groups, bad armor, surprisingly good melee, TU, and accuracy, but noodle armed
+ - Gangers: more elite than scum, mobility emphasis (dodge chances, etc), chance to use necromunda styles.
+ - Desperado: Hero tier, great TUs, great reactions, good shooting accuracy, very high dodge chance, investigate possibility of quickdraw script (shoot enemy before they can shoot you)
+ - Penal soldiers: same as usual, recruited in large groups, can be promoted to guardsmen
+ - PDF soldiers: Same as usual, can be upgraded to guardsmen
+ - Guardsmen: same as usual, promoted to veterans
+ - Veterans: same as usual, good equipment and whatnot.
+ - Beastmen: Not the same as beastguards (less disciplined+worse armor), get promoted to beastguards
+ - Beastguards: same as usual
+ - Techgors: same as usual
+ - Hereteks: Recruited in small numbers, very elite. Maybe lock behind radical
+ - Enforcer: Not a full on arbites, still decent because early carapace
+ - Arbitrator, judge, etc
+ - Mutant: Stats start low but have very high caps. 
