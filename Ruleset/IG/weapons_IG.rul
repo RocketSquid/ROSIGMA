@@ -16,6 +16,147 @@ extended:
       ITEM_IS_TOOL: int
 
 items:
+  - type: STR_SERVO_FIST
+    weight: 0
+    specialIconSprite: #change this
+    specialUseEmptyHand: true
+    meleeHitSound: {mod: 40k, index: 101}
+    meleeAnimation: 0
+    damageType: 7
+    power: 50 # melee
+    damageBonus:
+      strength: 0.4
+      melee: 0.2
+    damageAlter:
+      ArmorEffectiveness: 0.9
+    accuracyMelee: 70
+    meleeMultiplier:
+      flatHundred: 0.5
+      melee: 0.5
+    tuMelee: 10
+    flatMelee:
+      time: true
+    fixedWeapon: true
+    recover: false
+    battleType: 3
+    clipSize: -1
+    experienceTrainingMode: 13
+  
+  - type: STR_HEAVY_BOLTER_AUGMENTIC #Should be about comparable to hellguns. Better range and rapid firing, but needs ammo and doesn't hit quite as hard. 
+    bigSprite: {mod: 40k, index: 335}
+    bulletSprite: {mod: 40k, index: 6}
+    fireSound: {mod: 40k, index: 707}
+    compatibleAmmo:
+      - STR_AC_AP_AMMO
+      - STR_AC_MC_AMMO
+      - STR_AC_HE_AMMO
+      - STR_AC_I_AMMO
+    weight: 50
+    dropoff: 4 #standard for bolters
+    autoRange: 17 #Heavy bolters have good auto range
+    snapRange: 25 #Not as good as mounted, better than handheld
+    aimRange: 0 #May actually want to add an aimed shot option
+    accuracyAuto: 66 # Same as light bolters, between mounted and handheld heavy
+    accuracySnap: 80 # Same as light bolters, between mounted and handheld heavy
+    accuracyAimed: 0
+    tuAuto: 45 # Arm mounted weapon, can get two auto bursts per turn. Each one 5 shots? 6? Basic HB is 5.
+    tuSnap: 30 # Slower than you'd expect, but it's a double tap
+    tuAimed: 0
+    confSnap:
+      shots: 2
+    confAuto:
+      shots: 6
+    tuLoad: 5
+    battleType: 1
+    invWidth: 2
+    invHeight: 3
+    followProjectiles: false   # the camera stays still while shooting (prevents minigun seizures)
+    fixedWeapon: true
+    recover: false
+    listOrder: 6910 #need to change this but don't know what to
+    sprayWaypoints: 2
+    bulletSpeed: 50
+    accuracyMultiplier:
+      firing: 1
+      flatHundred: 0.2 #+20 aim on this weapon only, neural gunlink.
+    defaultInventorySlot: STR_LEFT_HAND
+      
+  - type: STR_MISSILE_POD_AUGMENTIC
+    bigSprite:
+    bulletSprite:
+    fireSound:
+    compatibleAmmo:
+      - STR_HEAVY_ROCKET_HE
+      - STR_HEAVY_ROCKET_KRAK
+      - STR_HEAVY_ROCKET
+      - STR_SENTINEL_FRAG_MISSILES
+      - STR_SENTINEL_KRAKK_MISSILES
+      - STR_SENTINEL_INC_MISSILES
+    weight: 50
+    dropoff: 5
+    accuracySnap: 60 #same as marine
+    accuracyAimed: 90 #same as marine
+    accuracyAuto: 45 #Say goodbye to that side of the map
+    tuSnap: 45 #neural link, quick to fire
+    tuAimed: 80
+    tuAuto: 80
+    confAuto:
+      shots: 4
+    tuLoad: 5
+    battleType: 1
+    invWidth: 2
+    invHeight: 3
+    fixedWeapon: true
+    recover: false
+    autoRange: 18
+    snapRange: 20
+    aimRange: 32
+    listOrder: 6910 #need to change this but don't know what to
+    accuracyMultiplier:
+      firing: 1
+      flatHundred: 0.2 #+20 aim on this weapon only, neural gunlink.
+    defaultInventorySlot: STR_LEFT_HAND
+    
+  - type: STR_TECHGOR_POWER_CLAW # based on STR_COMMISSAR_CLAW_BUILTIN
+    categories: [STR_CAT_MELEE]
+    size: 0.2
+    costSell: 5500
+    weight: 15
+    bigSprite: 248 #change this
+#    floorSprite: 610
+    handSprite: 248
+    meleeSound: {mod: 40k, index: 753}
+    meleeHitSound: {mod: 40k, index: 754}
+    meleeAnimation: {mod: 40k, index: 12}
+    power: 65
+    damageType: 7
+    damageBonus:
+      strength: 0.3
+      melee: 0.5
+    damageAlter:     #DA POWER
+      ArmorEffectiveness: 0.7
+      ToArmorPre: 0.2
+      ToHealth: 0.9
+    accuracyMelee: 80
+    tuMelee: 10
+    flatRate: true
+    clipSize: -1
+    strengthApplied: false
+    battleType: 3
+    invWidth: 2
+    invHeight: 3
+    armor: 200
+    skillApplied: true
+    meleeMultiplier:
+      melee: 1.0
+      flatHundred: 0.0
+    # experienceTrainingMode: 13
+    listOrder: 12410
+    recover: false
+    fixedWeapon: true
+    fixedWeaponShow: true
+    defaultInventorySlot: STR_LEFT_HAND
+    
   - type: STR_LASGUN_ESCHER
     categories: [STR_CAT_LASGUN, STR_CAT_TACTICAL]
     size: 0.2
