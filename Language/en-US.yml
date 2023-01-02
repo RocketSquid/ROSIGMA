@@ -120,6 +120,8 @@ en-US:
   STR_BASIC_SPAWN_DEVASTATOR_MARINES_RESEARCH: "Request Devastator Marines"
   STR_BASIC_SPAWN_ASSAULT_MARINES_RESEARCH: "Request Assault Marines"
 
+  STR_MCRIFLE_UFOPEDIA: "Ornate, decorated, shining with improved firepower. Produced by a senior Tech-priest or Techmarine, each component of the weapon crafted, tested, anointed, calibrated and blessed by the Omnissiah."   
+  
   #Chaos Path
   STR_CHAMBER_CHAOS_PATH: "Contact Chaos Forces" #unlocks STR_CHAOS_MARINE_HIRE_RESEARCH
   STR_MARINE_CHAOS_PATH: "Contact Chaos Forces" #unlocks STR_CHAOS_MARINE_HIRE_RESEARCH
@@ -1090,7 +1092,6 @@ en-US:
   STR_LAUNCH_GRENADE: "Launch Grenade"
   STR_LAUNCH_GRENADE_SHORT: "Grenade (x{0})"
   STR_HALLEBARD_SNAPSHOT_LUNGE: "Lunge"
-  STR_HOLOCAUST_TOME: "Tome of the Mind (Holocaust)"
   STR_ELDAR_LIGHT_PLAYER: "Eldar Lightning"
 
   STR_INCENDIARY_GRENADE40: "40mm Incendiary Grenade"
@@ -3021,6 +3022,8 @@ en-US:
   STR_SNAP_POWER_BONUS: "Power Bonus for Snap"
   STR_AIMED_POWER_BONUS: "Power Bonus for Aimed"
   STR_MELEE_POWER_BONUS: "Power Bonus for Melee"
+  STR_MAXIMAL_SHOT: "Maximal Shot"
+  STR_PRECISION_SHOT: "Precision Shot"
 
   STR_VALKYRIE_GRAV_DROP_IG: "Valkyrie Drop-Transport Requisition"
   STR_TAUROX_IG: "Taurox Requisition"
@@ -3085,7 +3088,7 @@ en-US:
   STR_YARRICK_IG_DESCRIPTION: "The distinguished war hero Sebastian Yarrick joins your forces after you have purged the Greenskin Warboss from this world. Now after the Orks are no major threat to this world anymore, he can direct his attention to your war effort."
 
   STR_COMMISSAR_IG: "Commissar Filip Joins"
-  STR_COMMISSAR_IG_DESCRIPTION: "The Commissar Filip joins this sad excuse of a PDF outpost to motivate our troops to keep fighting despite heavy losses and to show how it's done to fight in the Emperor's Name!."
+  STR_COMMISSAR_IG_DESCRIPTION: "The Commissar Filip joins this sad excuse of a PDF outpost to motivate our troops to keep fighting despite heavy losses and to show how it's done to fight in the Emperor's Name!"
 
   STR_SPACEHULK_DETECTED_ORK: "Spacehulk Detected"
   STR_SPACEHULK_DETECTED_TYRANID: "Spacehulk Detected"
@@ -4127,6 +4130,46 @@ en-US:
   STR_INQ_HELLGUN: "Inquisition Hellgun"
   STR_INQ_STORMTROOPER_CARAPACE_ARMOR_HELLGUN: "Inquisition Hellgun Armor"
   STR_INQ_HELLGUN_UFOPEDIA: "{NEWLINE}The Inquisition Hellgun is a high quality, scoped Hellgun variant with a sanctified bayonet and finely tuned settings."
+  STR_INQ_FLAMER: "Inquisition Flamer"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_FLAMER: "Inquisition Flamer Armor"
+  STR_INQ_FLAMER_UFOPEDIA: "{NEWLINE}This a mastercrafted, consecrated Flamer variant with improved range and an optimized fuel mix.
+    {NEWLINE}Abilities:
+    {NEWLINE}> {ALT}Consecrated:{ALT} This weapon gains a bonus to its Power equal to 20% of its user's Devotion."
+  STR_INQ_PLASMA: "Inquisition Twincore Plasma Rifle"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_PLASMA: "Inquisition Plasma Armor"
+  STR_INQ_PLASMA_UFOPEDIA: "{NEWLINE}This weapon is a finely calibrated and optimized twincore Dekker pattern plasma rifle adapted for use with a stormtrooper powerpack. It features a superior cooling suite and a maximal power setting allowing for more damage at the expense of added heat."
+  STR_INQ_PLASMA_2_UFOPEDIA:
+    "{NEWLINE}Abilities:
+    {NEWLINE}> {ALT}May Overheat:{ALT} This weapon is capable of overheating with sustained use.
+    {NEWLINE}> {ALT}Maximal Shot:{ALT} Increases Power by 50 for four times the ammo cost and heat."
+  STR_INQ_LONGLAS: "Inquisition Longlas"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_LONGLAS: "Inquisition Longlas Armor"
+  STR_INQ_LONGLAS_UFOPEDIA: "{NEWLINE}Utilizing the finest lasweapon technology available to the Imperium, this specialized longlas pattern is designed for sustained and highly accurate hotshot fire at extreme ranges. Sophisticated optics and sensors including cogitator assistance allows for superior vision and precision targeting even under adverse conditions."
+  STR_INQ_LONGLAS_2_UFOPEDIA:
+    "{NEWLINE}Abilities:
+    {NEWLINE}> {ALT}Adv. Sensor Suite:{ALT} This weapon grants an analyzer, superior anti-camo, night and thermal vision.
+    {NEWLINE}> {ALT}Sniper Weapon:{ALT} This weapon's damage scales with the user's Firing Accuracy.
+    {NEWLINE}> {ALT}Precision Shot:{ALT} This weapon's Aimed Shot targets vitals and weak points. Increases effective Power by 50."
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK: "Inquisition Jumppack Armor"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK_UFOPEDIA: "{NEWLINE}Specialized set of high mobility jumppack armor that is meant for use in assault, flanking and reconnaissence roles. Comes with an enhanced sensor array."
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK_UFOPEDIA_2:
+    "{NEWLINE}Gear Set:
+    {NEWLINE}> {ALT}Sensor Suite:{ALT} This armor benefits from an enhanced sensor array. Affords superior anti-camo, night and thermal vision.
+    {NEWLINE}> {ALT}Jumppack:{ALT} Allows for limited flight. Flight Duration: 1 Flight Cooldown: 1."
+  STR_INQ_MEDI_KIT: "Inquisition Medikit"
+  STR_INQ_SHIELD: "Inquisition Shield"
+  STR_INQ_HELLPISTOL: "Inquisition Hellpistol"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE: "Inquisition Medicae Armor"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE_UFOPEDIA: "{NEWLINE}Stormtrooper armor specialized for combat medicine and first aid. Heavily armored, it is additionally outfitted with a refractor and a durable shield reinforced with ceramite to enable lifesaving treatments under battlefield conditions. A powerpack synced hellpistol provides for the user's self-defense."
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE_UFOPEDIA_2:
+    "{NEWLINE}Gear Set:
+    {NEWLINE}> {ALT}Hellpistol:{ALT} A masterwork hellpistol tied to the armor's power pack.
+    {NEWLINE}> {ALT}Ballistic Shield:{ALT} Thick ballistic shield reinforced by ceramite plates.
+    {NEWLINE}> {ALT}Medicae Array:{ALT} A suite of surgical and medical tools designed for quick and effective battlefield treatment.
+    {NEWLINE}> {ALT}Refractor Field:{ALT} Built-in refractor field integrated with the armor's power pack. Shields: 100"
+  STR_INQ_MULTIMELTA: "Inquisition Multimelta"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MULTIMELTA: "Inquisition Multimelta Armor"
+  STR_INQ_MULTIMELTA_UFOPEDIA: "{NEWLINE}A mastercrafted multimelta specially designed to draw power from a high yield stormtrooper powerpack. This is an assault variant ideal for breaching, armor breaking and close quarters combat; it has been devoutly optimized and calibrated for maximum performance and lethality."
   STR_REWARD_INQUISITION_STORMTROOPERS: "Inquisition Storm Troopers Activated"
   STR_REWARD_INQUISITION_STORMTROOPERS_SCRIPT: "Reward Inquisition Storm Troopers Script"
   STR_REWARD_INQUISITION_STORMTROOPERS_DESCRIPTION: "{NEWLINE}The Inquisition have taken note of your great progress and activated an available fireteam of Inquisition Storm Troopers to assist you."
@@ -4153,7 +4196,7 @@ en-US:
 
 ## Grey Knights Spells
 
-  STR_SMITE_TOME: "Tome of the Mind (Holocaust)"
+  STR_HOLOCAUST_TOME: "Tome of the Mind (Holocaust)"
   STR_HOLOCAUST_SPELL: "Holocaust"
   STR_HOLOCAUST_SPELL_UFOPEDIA: "{NEWLINE} A powerful evocation of spiritual flame exclusive to the Grey Knights that scours flesh and soul alike, echoing the God Emperor's final banishment of Horus; those so destroyed are consumed utterly, leaving no trace. Deals armor ignoring damage that reduces morale and scales with the user's psychic ability and Devotion."
   STR_ELDAR_LIGHT_SPELL_UFOPEDIA: "{NEWLINE} A discharge of psychic energy in the form of coruscating spectral lightning that phases effortlessly through even the thickest armor. Deals armor ignoring damage that scales with the user's psychic ability and skill."
@@ -4588,3 +4631,16 @@ en-US:
   STR_SEDUCE: "Seduce"
   AUX_SERVITOR_KIT: "Servitor Kit"
   STR_SLASCANPD: "Lascannon"
+  STR_KHORNE_BERSERKER_AXE: "Khorne Berserker Chainaxe"
+
+# Script Text
+
+  STR_SCRIPT_IG_COMMAND_FIX_BAYONETS: "Remaining Command Points: {0} - Soldiers {1} Current Command: Fix Bayonets"
+  STR_SCRIPT_IG_COMMAND_BLITZKRIEG: "Remaining Command Points: {0} - Soldiers {1} Current Command: Blitzkrieg"
+  STR_SCRIPT_IG_COMMAND_HUNKER_DOWN: "Remaining Command Points: {0} - Soldiers {1} Current Command: Hunker Down"
+  STR_SCRIPT_IG_COMMAND_NO_COMMAND: "Remaining Command Points: {0} - Soldiers {1} Currently no Command"
+  STR_SCRIPT_IG_COMMAND_NOT_ENOUGH_CP: "Not enough Command Points. Current Command Points {0} - Cost {1}"
+  STR_SCRIPT_IG_COMMAND_ALREADY_ISSUED: "A command has been issued this turn already!"
+
+  STR_SCRIPT_FLIGHT_DURATION_LEFT: "Flight Duration Left: {0}"
+  STR_SCRIPT_COOLDOWN_DURATION_LEFT: "Cooldown Duration Left: {0}"

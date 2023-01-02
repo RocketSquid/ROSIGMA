@@ -44,6 +44,32 @@ ufopaedia:
       - STR_INQ_STORMTROOPER
     listOrder: 6810 #change
 
+  - id: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK         #6800   #ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: INQ_STORMTROOPER_ARMOR_CODEX.SPK
+    pages:
+      - title: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK
+        text: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK_UFOPEDIA
+      - title: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK
+        text: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK_UFOPEDIA_2
+    requires:
+      - STR_INQ_STORMTROOPER
+    listOrder: 6811 #change
+
+  - id: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE         #6800   #ARMOR
+    type_id: 15
+    section: STR_ARMORPEDIA
+    image_id: INQ_STORMTROOPER_ARMOR_CODEX.SPK
+    pages:
+      - title: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE
+        text: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE_UFOPEDIA
+      - title: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE
+        text: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE_UFOPEDIA_2
+    requires:
+      - STR_INQ_STORMTROOPER
+    listOrder: 6812 #change
+
   - id: STR_INQ_HELLGUN
     requires:
       - STR_INQ_STORMTROOPER_REQUISITION
@@ -52,6 +78,53 @@ ufopaedia:
     image_id: HELLGUN.SPK
     text: STR_INQ_HELLGUN_UFOPEDIA
     listOrder: 11080
+
+  - id: STR_INQ_FLAMER
+    requires:
+      - STR_INQ_STORMTROOPER_REQUISITION
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1MF.SPK
+    text: STR_INQ_FLAMER_UFOPEDIA
+    listOrder: 11081
+
+  - id: STR_INQ_LONGLAS
+    requires:
+      - STR_INQ_STORMTROOPER_REQUISITION
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: deserter_longlas.SPK
+    listOrder: 11082
+    pages:
+      - title: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_LONGLAS
+        text: STR_INQ_LONGLAS_UFOPEDIA
+      - title: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_LONGLAS
+        text: STR_INQ_LONGLAS_2_UFOPEDIA
+
+  - id: STR_INQ_PLASMA
+    requires:
+      - STR_INQ_STORMTROOPER_REQUISITION #high end weapon that is not immediately available.
+      - STR_PLASMA_GUN_TWINCORE_DEKKER
+      - STR_PLASMA_TWINCORE_CLIP
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: TWIN_CORE_CODEX.SPK
+    listOrder: 11083
+    pages:
+      - title: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_PLASMA
+        text: STR_INQ_PLASMA_UFOPEDIA
+      - title: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_PLASMA
+        text: STR_INQ_PLASMA_2_UFOPEDIA
+
+  - id: STR_INQ_MULTIMELTA
+    requires:
+      - STR_INQ_STORMTROOPER_REQUISITION
+      - STR_BLASTER_LAUNCHER #needs multimelta researched
+    type_id: 14
+    section: STR_WEAPONS_AND_EQUIPMENT
+    image_id: 1MM.SPK
+    text: STR_INQ_MULTIMELTA_UFOPEDIA
+    listOrder: 11084
 
   - id: STR_HAND_MULTILASER_PAI
     requires:
