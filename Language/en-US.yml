@@ -43,11 +43,11 @@ en-US:
 
   STR_ALIEN_SUPPLY: "Chaos Resupply"
   STR_ALIEN_SUPPLY_UFOPEDIA: "For every enemy stronghold built, the enemy must also provide supplies and reinforcements, building up their positions to expand their foothold on the planet and fuel more raids into our territory. {NEWLINE} {NEWLINE} As our own options are limited, by identifying and boarding these vessels we can resupply ourselves."
-  
-  STR_ALIEN_HARVEST_UFOPEDIA: "The Chaos Forces ever seek to befoul the perfect human Imperial form, as tainted flesh soon gives way to warped minds, with mutation comes heresy of the foulest kind. A single rotten apple spoils the whole bunch, root out this filth by putting every mutant, extended family and loose acquaintances to the flamer and chainsword! {NEWLINE} {NEWLINE}...And any Chaos forces you may find as well, of course. " 
+
+  STR_ALIEN_HARVEST_UFOPEDIA: "The Chaos Forces ever seek to befoul the perfect human Imperial form, as tainted flesh soon gives way to warped minds, with mutation comes heresy of the foulest kind. A single rotten apple spoils the whole bunch, root out this filth by putting every mutant, extended family and loose acquaintances to the flamer and chainsword! {NEWLINE} {NEWLINE}...And any Chaos forces you may find as well, of course. "
   STR_ALIEN_INFILTRATION_UFOPEDIA: "The Forces of Chaos are ever eager to tempt the loyal citizens of the Imperium with seduction and sedition, in depraved mockery of all that is holy, infiltrating the governing bodies of entire sectors with their heretic words. Cut out their tongues and sew their foul mouths shut once and for all!"
   STR_ALIEN_RESEARCH_UFOPEDIA: "The Forces of Chaos seek to amplify the warp disturbance wherever they can, using foul techno-sorcery to disrupt the stability of realspace. This not only cuts our communications, but allow the spread of unchecked mutation and ever larger daemonic incursions."
-  
+
   STR_CHIMEDON_SPAWNER: "Chimedon"
   STR_CHIMEDON_TURRET: "Chimedon"
   STR_CHIMEDON_ARMOR: "Chimedon"
@@ -120,6 +120,8 @@ en-US:
   STR_BASIC_SPAWN_DEVASTATOR_MARINES_RESEARCH: "Request Devastator Marines"
   STR_BASIC_SPAWN_ASSAULT_MARINES_RESEARCH: "Request Assault Marines"
 
+  STR_MCRIFLE_UFOPEDIA: "Ornate, decorated, shining with improved firepower. Produced by a senior Tech-priest or Techmarine, each component of the weapon crafted, tested, anointed, calibrated and blessed by the Omnissiah."   
+  
   #Chaos Path
   STR_CHAMBER_CHAOS_PATH: "Contact Chaos Forces" #unlocks STR_CHAOS_MARINE_HIRE_RESEARCH
   STR_MARINE_CHAOS_PATH: "Contact Chaos Forces" #unlocks STR_CHAOS_MARINE_HIRE_RESEARCH
@@ -1089,6 +1091,8 @@ en-US:
   STR_BURST_SNAP_SHOT: "Double Tap Shot"
   STR_LAUNCH_GRENADE: "Launch Grenade"
   STR_LAUNCH_GRENADE_SHORT: "Grenade (x{0})"
+  STR_HALLEBARD_SNAPSHOT_LUNGE: "Lunge"
+  STR_ELDAR_LIGHT_PLAYER: "Eldar Lightning"
 
   STR_INCENDIARY_GRENADE40: "40mm Incendiary Grenade"
   STR_PENITENCE_GRENADE40: "40mm Penitence Grenade"
@@ -1369,7 +1373,7 @@ en-US:
   NURGLE_CULTIST_GREENROBE_ARMOR_RITUALIST: "Nurgle Cultist"
   STR_NURGLE_CULTIST_LEADER_RITUALIST: "Nurgle Cult Leader"
   STR_NURGLE_CULTIST_LEADER_ARMOR_RITUALIST: "Nurgle Cult Leader"
-  
+
   STR_GREEN_MONK: "Sickly Civilian"
   GREEN_ROBE_ARMOR: "Sickly Civilian"
   STR_GREEN_ROBE_CORPSE: "Diseased Corpse"
@@ -1522,7 +1526,7 @@ en-US:
   MAP_UBASE_SLAAN: "Palatial Domain"
   STR_ALIEN_BASE_ASSAULT_SLAANESH: "SLAANESH PALACE ASSAULT"
   STR_ALIEN_BASE_ASSAULT2_SLAANESH: "SLAANESH PALACE PURGE"
-  STR_ALIEN_BASE_ASSAULT_SLAANESH_BRIEFING: "The slick soil shivers beaneath our sabatons, send the scantily clad Slaves of Slaanesh scurrying, slaughter them as they hide in their shuddering structures and swiftly spearhead a strike against their shameless, smirking, Seneschal-Commander! Secure this place with stiff steel and stern swagger!" 
+  STR_ALIEN_BASE_ASSAULT_SLAANESH_BRIEFING: "The slick soil shivers beaneath our sabatons, send the scantily clad Slaves of Slaanesh scurrying, slaughter them as they hide in their shuddering structures and swiftly spearhead a strike against their shameless, smirking, Seneschal-Commander! Secure this place with stiff steel and stern swagger!"
   STR_ALIEN_BASE_ASSAULT2_SLAANESH_BRIEFING:  "The very air simmers with soliciting scents and the moaning of the shuddering walls. Summon your strength and slice apart the suckers of Slaanesh, capture their shallow commander and shatter the command centre!"
 
 #The slick soil shivers beaneath our sabatons, send the scantily clad servants of Slaanesh scurrying and locate the shimmering entrance inside their scandalous halls!"
@@ -1540,16 +1544,16 @@ en-US:
   SLAANESH_DEMIMONDE_ARMOR_BLESSED_RITUALIST: "Slaanesh Demimonde"
   SLAANESH_DEMIMONDE_ARMOR_SACRIFICE: "Slaanesh Demimonde"
   SLAANESH_DEMIMONDE_ARMOR_BLESSED_SACRIFICE: "Slaanesh Demimonde"
-  STR_SLAANESH_DEMIMONDE_UFOPEDIA: "{NEWLINE} Wearing Slaanesh adorned cultist attire, these well sewn ritual dresses are heretical in the extreme." 
+  STR_SLAANESH_DEMIMONDE_UFOPEDIA: "{NEWLINE} Wearing Slaanesh adorned cultist attire, these well sewn ritual dresses are heretical in the extreme."
   STR_SLAANESH_DEMIMONDE_ORIGINS: "Demimonde Origins"
   STR_SLAANESH_DEMIMONDE_ORIGINS_UFOPEDIA: "{NEWLINE} Slaanesh Demimonde are hedonistic followers of Slaanesh who live hidden within Imperial society, doing their masters bidding until called upon to serve as offerings in heretical rituals, becoming willing hosts for Daemonettes."
-  
+
   STR_SLAANESH_SACRIFICE_F: "Slaanesh Sacrifice"
   STR_SLAANESH_SACRIFICE_M: "Slaanesh Sacrifice"
   SLAANESH_SACRIFICE_F_ARMOR: "Slaanesh Sacrifice"
   SLAANESH_SACRIFICE_M_ARMOR: "Slaanesh Sacrifice"
   STR_SLAANESH_SACRIFICE_CORPSE: "Slaanesh Pillar" #not actually a corpse, just the pillar
-  
+
   STR_CIVILIAN_HEDONITE_SACRIFICE: "Slaanesh Offering"
   STR_CIVILIAN_HEDONITE_BLESSED_SACRIFICE: "Slaanesh Offering"
   STR_CIVILIAN_HEDONITE_BLESSED_ALPHA_SACRIFICE: "Slaanesh Offering"
@@ -1557,7 +1561,7 @@ en-US:
   CIVILIAN_HEDONITE_ARMOR_BLESSED_SACRIFICE: "Slaanesh Offering"
   CIVILIAN_HEDONITE_ARMOR_BLESSED_ALPHA_SACRIFICE: "Slaanesh Offering"
   STR_CIVILIAN_HEDONITE_CORPSE: "Slaanesh Hedonite Corpse"
-  
+
 #SLAANGOR
   STR_SLAANGOR_LATE: "Chosen Slaangor Warband"
   STR_SLAANGOR_MIXED: "Slaangor Warband"
@@ -1766,7 +1770,7 @@ en-US:
   STR_Demidaemonette_ARMOR_UFOPEDIA: "{NEWLINE}{NEWLINE} CODEX ARMOR DETAIL" #ROSE
   STR_CHRYSSALID_TERRORISTSELENE: "Lesser Daemonette"
   STR_DIRE_DAEMONETTE: "Dire Daemonette"
-  STR_CHRYSSALID_ARMOR_DIRE: "Dire Daemonette" 
+  STR_CHRYSSALID_ARMOR_DIRE: "Dire Daemonette"
   STR_DIRE_DAEMONETTE_CORPSE: "Dire Daemonette Corpse"
   STR_DIRE_DAEMONETTE_CLAWS: "Daemonette Claws"
   STR_DIRE_DAEMONETTE_ORIGINS: "Dire Daemonette Origins"
@@ -3008,6 +3012,8 @@ STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on their long cultural tradi
   STR_SNAP_POWER_BONUS: "Power Bonus for Snap"
   STR_AIMED_POWER_BONUS: "Power Bonus for Aimed"
   STR_MELEE_POWER_BONUS: "Power Bonus for Melee"
+  STR_MAXIMAL_SHOT: "Maximal Shot"
+  STR_PRECISION_SHOT: "Precision Shot"
 
   STR_VALKYRIE_GRAV_DROP_IG: "Valkyrie Drop-Transport Requisition"
   STR_TAUROX_IG: "Taurox Requisition"
@@ -3072,7 +3078,7 @@ STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on their long cultural tradi
   STR_YARRICK_IG_DESCRIPTION: "The distinguished war hero Sebastian Yarrick joins your forces after you have purged the Greenskin Warboss from this world. Now after the Orks are no major threat to this world anymore, he can direct his attention to your war effort."
 
   STR_COMMISSAR_IG: "Commissar Filip Joins"
-  STR_COMMISSAR_IG_DESCRIPTION: "The Commissar Filip joins this sad excuse of a PDF outpost to motivate our troops to keep fighting despite heavy losses and to show how it's done to fight in the Emperor's Name!."
+  STR_COMMISSAR_IG_DESCRIPTION: "The Commissar Filip joins this sad excuse of a PDF outpost to motivate our troops to keep fighting despite heavy losses and to show how it's done to fight in the Emperor's Name!"
 
   STR_SPACEHULK_DETECTED_ORK: "Spacehulk Detected"
   STR_SPACEHULK_DETECTED_TYRANID: "Spacehulk Detected"
@@ -3196,6 +3202,10 @@ STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on their long cultural tradi
   STR_SPEEDR: "Landspeeder Requisition"
 
   STR_HALLEBARD_UFOPEDIA: "{NEWLINE} A Nemesis Force Halberd is a two-handed weapon that consists of a long adamantium haft with an iron and silver blade set upon the top. This extra reach often allows a Grey Knight to land a fatal blow, killing the enemy before coming within reach of its weapons.{NEWLINE}{NEWLINE}Weapon gains a power bonus equal to users {ALT}Devotion{ALT}{NEWLINE}Strength required: {ALT}100"
+
+  AUX_MEDI_KIT_ADVANCED: "Advanced Narthecium"
+  AUX_MEDI_KIT_MC: "Mastercrafted Narthecium"
+  AUX_PROBE_ADVANCED: "Advanced Analyzer"
 
 ## Stats for Nerds
 
@@ -3639,7 +3649,7 @@ STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on their long cultural tradi
   STR_SECTOID_DARK_DISCIPLE_DAEMONETTE: "Dark Disciple"
   STR_SECTOID_DARK_DISCIPLE_NEVERBORN: "Dark Disciple"
   STR_SECTOID_DARK_DISCIPLE_NEVERBORN_RITUALIST: "Dark Disciple"
-  
+
   STR_DARK_DISCIPLE_ARMOR_NEVERBORN_RITUALIST: "Dark Disciple"
   STR_DARK_DISCIPLE_ARMOR: "Dark Disciple"
   STR_DARK_DISCIPLE_ARMOR_DAEMONETTE: "Dark Disciple"
@@ -3738,7 +3748,7 @@ STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on their long cultural tradi
   STR_CAT_NURGLE: "Nurgle"
 
 #GSC
-  STR_GSC_RETALIATION: "Spiral Revenge" 
+  STR_GSC_RETALIATION: "Spiral Revenge"
   STR_GENE_CULT: "Genestealer Cult"
   STR_TYRANID_OUTPOST: "Tyranid Outpost"
 
@@ -4110,6 +4120,46 @@ STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on their long cultural tradi
   STR_INQ_HELLGUN: "Inquisition Hellgun"
   STR_INQ_STORMTROOPER_CARAPACE_ARMOR_HELLGUN: "Inquisition Hellgun Armor"
   STR_INQ_HELLGUN_UFOPEDIA: "{NEWLINE}The Inquisition Hellgun is a high quality, scoped Hellgun variant with a sanctified bayonet and finely tuned settings."
+  STR_INQ_FLAMER: "Inquisition Flamer"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_FLAMER: "Inquisition Flamer Armor"
+  STR_INQ_FLAMER_UFOPEDIA: "{NEWLINE}This a mastercrafted, consecrated Flamer variant with improved range and an optimized fuel mix.
+    {NEWLINE}Abilities:
+    {NEWLINE}> {ALT}Consecrated:{ALT} This weapon gains a bonus to its Power equal to 20% of its user's Devotion."
+  STR_INQ_PLASMA: "Inquisition Twincore Plasma Rifle"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_PLASMA: "Inquisition Plasma Armor"
+  STR_INQ_PLASMA_UFOPEDIA: "{NEWLINE}This weapon is a finely calibrated and optimized twincore Dekker pattern plasma rifle adapted for use with a stormtrooper powerpack. It features a superior cooling suite and a maximal power setting allowing for more damage at the expense of added heat."
+  STR_INQ_PLASMA_2_UFOPEDIA:
+    "{NEWLINE}Abilities:
+    {NEWLINE}> {ALT}May Overheat:{ALT} This weapon is capable of overheating with sustained use.
+    {NEWLINE}> {ALT}Maximal Shot:{ALT} Increases Power by 50 for four times the ammo cost and heat."
+  STR_INQ_LONGLAS: "Inquisition Longlas"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_LONGLAS: "Inquisition Longlas Armor"
+  STR_INQ_LONGLAS_UFOPEDIA: "{NEWLINE}Utilizing the finest lasweapon technology available to the Imperium, this specialized longlas pattern is designed for sustained and highly accurate hotshot fire at extreme ranges. Sophisticated optics and sensors including cogitator assistance allows for superior vision and precision targeting even under adverse conditions."
+  STR_INQ_LONGLAS_2_UFOPEDIA:
+    "{NEWLINE}Abilities:
+    {NEWLINE}> {ALT}Adv. Sensor Suite:{ALT} This weapon grants an analyzer, superior anti-camo, night and thermal vision.
+    {NEWLINE}> {ALT}Sniper Weapon:{ALT} This weapon's damage scales with the user's Firing Accuracy.
+    {NEWLINE}> {ALT}Precision Shot:{ALT} This weapon's Aimed Shot targets vitals and weak points. Increases effective Power by 50."
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK: "Inquisition Jumppack Armor"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK_UFOPEDIA: "{NEWLINE}Specialized set of high mobility jumppack armor that is meant for use in assault, flanking and reconnaissence roles. Comes with an enhanced sensor array."
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK_UFOPEDIA_2:
+    "{NEWLINE}Gear Set:
+    {NEWLINE}> {ALT}Sensor Suite:{ALT} This armor benefits from an enhanced sensor array. Affords superior anti-camo, night and thermal vision.
+    {NEWLINE}> {ALT}Jumppack:{ALT} Allows for limited flight. Flight Duration: 1 Flight Cooldown: 1."
+  STR_INQ_MEDI_KIT: "Inquisition Medikit"
+  STR_INQ_SHIELD: "Inquisition Shield"
+  STR_INQ_HELLPISTOL: "Inquisition Hellpistol"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE: "Inquisition Medicae Armor"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE_UFOPEDIA: "{NEWLINE}Stormtrooper armor specialized for combat medicine and first aid. Heavily armored, it is additionally outfitted with a refractor and a durable shield reinforced with ceramite to enable lifesaving treatments under battlefield conditions. A powerpack synced hellpistol provides for the user's self-defense."
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE_UFOPEDIA_2:
+    "{NEWLINE}Gear Set:
+    {NEWLINE}> {ALT}Hellpistol:{ALT} A masterwork hellpistol tied to the armor's power pack.
+    {NEWLINE}> {ALT}Ballistic Shield:{ALT} Thick ballistic shield reinforced by ceramite plates.
+    {NEWLINE}> {ALT}Medicae Array:{ALT} A suite of surgical and medical tools designed for quick and effective battlefield treatment.
+    {NEWLINE}> {ALT}Refractor Field:{ALT} Built-in refractor field integrated with the armor's power pack. Shields: 100"
+  STR_INQ_MULTIMELTA: "Inquisition Multimelta"
+  STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MULTIMELTA: "Inquisition Multimelta Armor"
+  STR_INQ_MULTIMELTA_UFOPEDIA: "{NEWLINE}A mastercrafted multimelta specially designed to draw power from a high yield stormtrooper powerpack. This is an assault variant ideal for breaching, armor breaking and close quarters combat; it has been devoutly optimized and calibrated for maximum performance and lethality."
   STR_REWARD_INQUISITION_STORMTROOPERS: "Inquisition Storm Troopers Activated"
   STR_REWARD_INQUISITION_STORMTROOPERS_SCRIPT: "Reward Inquisition Storm Troopers Script"
   STR_REWARD_INQUISITION_STORMTROOPERS_DESCRIPTION: "{NEWLINE}The Inquisition have taken note of your great progress and activated an available fireteam of Inquisition Storm Troopers to assist you."
@@ -4123,8 +4173,23 @@ STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on their long cultural tradi
 
 ## Grey Knights Armor
 
-  STR_GK_CHP_LVL2_UC: "Aegis T. Chaplain Armor"
-  STR_GK_CHP_LVL3_UC: "Aegis T. Chaplain Armor"
+  STR_GK_CHP_UC: "Aegis T. Chaplain Armor"
+  STR_GK_CHP_LV2_UC: "Aegis T. Chaplain Armor"
+  STR_GK_CHP_LV3_UC: "Aegis T. Chaplain Armor"
+
+  STR_GK_TEC_LV4_UC: "Aegis T. Techmarine Armor"
+
+  STR_GK_APO_LV1_UC: "Aegis T. Apothecary Armor"
+  STR_GK_APO_LV2_UC: "Aegis T. Apothecary Armor"
+  STR_GK_APO_LV3_UC: "Aegis T. Apothecary Armor"
+  STR_GK_APO_LV4_UC: "Aegis T. Apothecary Armor"
+
+## Grey Knights Spells
+
+  STR_HOLOCAUST_TOME: "Tome of the Mind (Holocaust)"
+  STR_HOLOCAUST_SPELL: "Holocaust"
+  STR_HOLOCAUST_SPELL_UFOPEDIA: "{NEWLINE} A powerful evocation of spiritual flame exclusive to the Grey Knights that scours flesh and soul alike, echoing the God Emperor's final banishment of Horus; those so destroyed are consumed utterly, leaving no trace. Deals armor ignoring damage that reduces morale and scales with the user's psychic ability and Devotion."
+  STR_ELDAR_LIGHT_SPELL_UFOPEDIA: "{NEWLINE} A discharge of psychic energy in the form of coruscating spectral lightning that phases effortlessly through even the thickest armor. Deals armor ignoring damage that scales with the user's psychic ability and skill."
 
 
 ## Grey Knights Research
@@ -4169,29 +4234,54 @@ STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on their long cultural tradi
     {NEWLINE}Shield: 150
     {NEWLINE}Built-In MC Storm Bolter"
 
+  STR_GK_APO_LEVELS_STATS_UFOPEDIA: "Promotion Stat Total Bonuses:
+    {ALT}{NEWLINE}LVL1:\tNot Available
+    {ALT}{NEWLINE}LVL2:\tTU-10, STA-10, HP+10, BRV+10
+    {NEWLINE}Narthecium
+    {ALT}{NEWLINE}LVL3:\tTU-10, STA-10, HP+10, BRV+10, MEL+5, Shield: 100
+    {NEWLINE}Narthecium"
+
+  STR_GK_APO_LEVELS_STATS_2_UFOPEDIA: "Promotion Stat Total Bonuses:
+    {ALT}{NEWLINE}LVL4:\tTU-10, STA-10, HP+20, BRV+20, MEL+10, Shield: 150
+    {NEWLINE}Advanced Narthecium
+    {ALT}{NEWLINE}LVL5:\tTU-10, STA-10, HP+30, BRV+30, MEL+20, Shield: 200
+    {NEWLINE}Mastercrafted Narthecium"
+
   STR_GK_LIB_LEVELS_STATS_UFOPEDIA: "Promotion Stat Total Bonuses:
     {ALT}{NEWLINE}LVL1:\tNot Available
     {ALT}{NEWLINE}LVL2:\tNot Available
-    {ALT}{NEWLINE}LVL3:\tNone, Spell: Shield
-    {ALT}{NEWLINE}LVL4:\tSTA+30, FA-10, MEL+10, Spell: Lockdown
-    {ALT}{NEWLINE}LVL5:\tSTA+30, FA-20, MEL+20, Spell: Speed + Shield"
+    {ALT}{NEWLINE}LVL3:\tSTA+10, FA-10, THR-10, MEL+5, PSY+10, DEV+10
+    {NEWLINE} Spell: Holocaust"
+
+  STR_GK_LIB_LEVELS_STATS_2_UFOPEDIA: "Promotion Stat Total Bonuses:
+    {ALT}{NEWLINE}LVL4:\tSTA+20, FA-10, THR-10, MEL+10, PSY+20, DEV+20, Psi Vision: 3
+    {NEWLINE} Spell: Holocaust
+    {ALT}{NEWLINE}LVL5:\tSTA+30, BRV+10, FA-10, THR-10, MEL+20, PSY+30, DEV+30, Psi Vision: 5
+    {NEWLINE} Spell: Speed + Holocaust"
 
   STR_GK_TEC_LEVELS_STATS_UFOPEDIA: "Promotion Stat Total Bonuses:
     {ALT}{NEWLINE}LVL1:\tNot Available
-    {ALT}{NEWLINE}LVL2:\tNone, Analyse + Repair
-    {ALT}{NEWLINE}LVL3:\tNone, Analyse + Repair + Tarantula Turret
-    {ALT}{NEWLINE}LVL4:\tNone, Analyse + Repair + Thunderfire Turret
-    {ALT}{NEWLINE}LVL5:\tNot Available"
+    {ALT}{NEWLINE}LVL2:\tSTA+50, HP+10, REA-10, THR+10, STR+25, MEL+10
+    {NEWLINE} Analyser/Repair Module
+    {ALT}{NEWLINE}LVL3:\tSTA+50, HP+10, REA-10, THR+10, STR+25, MEL+10
+    {NEWLINE} Analyser/Repair Module + Tarantula Turret"
 
+  STR_GK_TEC_LEVELS_STATS_2_UFOPEDIA: "Promotion Stat Total Bonuses:
+    {ALT}{NEWLINE}LVL4:\tSTA+50, HP+10, REA-10, THR+10, STR+25, MEL+10
+    {NEWLINE} Analyser/Repair Module + Thunderfire Drone
+    {ALT}{NEWLINE}LVL5:\tSTA+80, HP+20, REA-10, THR+20, STR+40, MEL+20, Shield: 100
+    {NEWLINE} Adv. Analyser/Repair Module + Thunderfire Drone"
 
   STR_GK_CHP_LEVELS_STATS_UFOPEDIA: "Promotion Stat Total Bonuses:
     {ALT}{NEWLINE}LVL1:\tNot Available
     {ALT}{NEWLINE}LVL2:\tNot Available
-    {ALT}{NEWLINE}LVL3:\tNone,
+    {ALT}{NEWLINE}LVL3:\tTU+10, STA+10, HP+20, REA-10,
+    {NEWLINE}MC Storm Bolter, Crozius Arcanum"
+
+  STR_GK_CHP_LEVELS_STATS_2_UFOPEDIA: "Promotion Stat Total Bonuses:
+    {ALT}{NEWLINE}LVL4:\tTU+10, STA+10, HP+20, BRV+10, REA-10, Shield: 80,
     {NEWLINE}MC Storm Bolter, Crozius Arcanum
-    {ALT}{NEWLINE}LVL4:\tBRV+10, Shield: 80,
-    {NEWLINE}MC Storm Bolter, Crozius Arcanum
-    {ALT}{NEWLINE}LVL5:\tBRV+20, Shield: 150,
+    {ALT}{NEWLINE}LVL5:\tTU+10, STA+10, HP+20, BRV+20, REA-10, Shield: 150,
     {NEWLINE}MC Storm Bolter, Crozius Arcanum"
 
 ## Primaris Armor Bonuses
@@ -4398,8 +4488,8 @@ STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on their long cultural tradi
   GMGEO17: "Ruins"
   GMGEO18: "Decisive Battles"
   GMGEO19: "Craven"
-  GMGEO20: "Durandal"  
-  
+  GMGEO20: "Durandal"
+
   GMTACTIC4: "Final Liberation Battle Track #1"
   GMTACTIC5: "Final Liberation Battle Track #2"
   GMTACTIC6: "Final Liberation Battle Track #3"
@@ -4423,8 +4513,8 @@ STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on their long cultural tradi
   GMTACTIC24: "Final Liberation Battle Track #13 - Go Hard"
   GMTACTIC25: "Soil Control"
   GMTACTIC26: "Knight of Fire"
-  GMTACTIC27: "Omega"  
-  
+  GMTACTIC27: "Omega"
+
   #*** MISC 2 *********************************************************************
   STR_PLASMA_CANNON_DEP1: "Craft Plasma Cannon"
   STR_PLASMA_CANNON_DEP2: "Craft Plasma Cannon"
@@ -4531,3 +4621,16 @@ STR_SQUAT_POWER_ARMOR_UFOPAEDIA: "{NEWLINE} Drawing on their long cultural tradi
   STR_SEDUCE: "Seduce"
   AUX_SERVITOR_KIT: "Servitor Kit"
   STR_SLASCANPD: "Lascannon"
+  STR_KHORNE_BERSERKER_AXE: "Khorne Berserker Chainaxe"
+
+# Script Text
+
+  STR_SCRIPT_IG_COMMAND_FIX_BAYONETS: "Remaining Command Points: {0} - Soldiers {1} Current Command: Fix Bayonets"
+  STR_SCRIPT_IG_COMMAND_BLITZKRIEG: "Remaining Command Points: {0} - Soldiers {1} Current Command: Blitzkrieg"
+  STR_SCRIPT_IG_COMMAND_HUNKER_DOWN: "Remaining Command Points: {0} - Soldiers {1} Current Command: Hunker Down"
+  STR_SCRIPT_IG_COMMAND_NO_COMMAND: "Remaining Command Points: {0} - Soldiers {1} Currently no Command"
+  STR_SCRIPT_IG_COMMAND_NOT_ENOUGH_CP: "Not enough Command Points. Current Command Points {0} - Cost {1}"
+  STR_SCRIPT_IG_COMMAND_ALREADY_ISSUED: "A command has been issued this turn already!"
+
+  STR_SCRIPT_FLIGHT_DURATION_LEFT: "Flight Duration Left: {0}"
+  STR_SCRIPT_COOLDOWN_DURATION_LEFT: "Cooldown Duration Left: {0}"

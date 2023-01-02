@@ -8,7 +8,7 @@ armors:
     antiCamouflageAtDay: 5 #+1 Inq
     antiCamouflageAtDark: 5 #+1 Inq
     spriteSheet: INQ_STORMTROOPER_BS.PCK
-    spriteInv: INQ_STORMTROOPER_INV_ 
+    spriteInv: INQ_STORMTROOPER_INV_
     drawingRoutine: 0
     customArmorPreviewIndex: 580 #Unique
     storeItem: STR_NONE #STR_INQ_STORMTROOPER_CARAPACE_ARMOR
@@ -18,6 +18,11 @@ armors:
     sideArmor: 80 #+10 inq
     rearArmor: 55 #+5 inq
     underArmor: 50 #+10 inq
+    zombiImmune: true #Armor's hexagrammic and pentagrammic wards protect from daemonic corruption
+    psiDefence:
+      flatHundred: 0.5 #Armor's hexagrammic and pentagrammic wards protect from psychic influence
+      psiSkill: 1.0 #Armor's hexagrammic and pentagrammic wards enhance the protection granted by faith and Devotion
+      moraleCurrent: 1.0 #Discipline and training protects from psychic influence.
     damageModifier: #GUARD ARMOR
       - 1.0 #none
       - 1.0 #AP
@@ -35,24 +40,157 @@ armors:
       - STR_INQ_STORMTROOPER
     loftempsSet: [ 3 ]
     stats:
-       firing: 10
-       reactions: 10
-       bravery: 10
+      firing: 10
+      reactions: 10
+      bravery: 10
 
   - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_HELLGUN
     refNode: *STR_INQ_ARMOR_CARAPACE_STORMTROOPER
     storeItem: STR_NONE
-    builtInWeapons:      
+    builtInWeapons:
       - STR_INQ_HELLGUN
       - INV_NULL_STORM_TROOPER_BACKPACK #needs a black version
 
   - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MULTILAS
     refNode: *STR_INQ_ARMOR_CARAPACE_STORMTROOPER
     storeItem: STR_NONE
-    builtInWeapons:      
+    builtInWeapons:
       - STR_HAND_MULTILASER_PAI
       - INV_NULL_STORM_TROOPER_BACKPACK #needs a black version
-      
+
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_FLAMER
+    refNode: *STR_INQ_ARMOR_CARAPACE_STORMTROOPER
+    storeItem: STR_NONE
+    damageModifier: #Better insulated against fire/heat
+      - 0.4 #FLAMES
+      - 0.7 #LASCANNON
+      - 0.7 #PLASMA
+      - 0.9 #MELTA
+    builtInWeapons:
+      - STR_INQ_FLAMER
+      - INV_NULL_STORM_TROOPER_BACKPACK_FLAMER
+
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_PLASMA
+    refNode: *STR_INQ_ARMOR_CARAPACE_STORMTROOPER
+    storeItem: STR_NONE
+    requires: STR_PLASMA_GUN_TWINCORE_DEKKER
+    builtInWeapons:
+      - STR_INQ_PLASMA
+      - INV_NULL_STORM_TROOPER_BACKPACK #needs a black version
+
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MULTIMELTA
+    refNode: *STR_INQ_ARMOR_CARAPACE_STORMTROOPER
+    storeItem: STR_NONE
+    requires: STR_BLASTER_LAUNCHER #requires multimelta research
+    builtInWeapons:
+      - STR_INQ_MULTIMELTA
+      - INV_NULL_STORM_TROOPER_BACKPACK #needs a black version
+
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_LONGLAS
+    refNode: *STR_INQ_ARMOR_CARAPACE_STORMTROOPER
+    visibilityAtDark: 35 #Improved targeting/scope technology
+    heatVision: 50 #Improved targeting/scope technology
+    antiCamouflageAtDay: 12 #Improved targeting/scope technology
+    antiCamouflageAtDark: 12 #Improved targeting/scope technology
+    stats:
+      firing: 20 #Improved firing accuracy; +10 over baseline
+    storeItem: STR_NONE
+    specialWeapon: AUX_ADEPTAS_PROBE
+    builtInWeapons:
+      - STR_INQ_LONGLAS
+      - INV_NULL_STORM_TROOPER_BACKPACK #needs a black version
+
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_JUMPPACK
+    refNode: *STR_INQ_ARMOR_CARAPACE_STORMTROOPER
+    spriteSheet: blackstone_jumptrooperBS.PCK #placeholder
+    visibilityAtDark: 30 #Improved sensor array
+    heatVision: 40 #Improved sensor array
+    antiCamouflageAtDay: 10 #Improved sensor array
+    antiCamouflageAtDark: 10 #Improved sensor array
+    stats:
+      tu: 10 #Improved time units; +10 over baseline
+      stamina: 10 #Improved stamina; +10 over baseline
+      reactions: 20 #Improved reactions; +10 over baseline
+      firing: -20 #Armor is more CQC focused
+      melee: 10
+    storeItem: STR_NONE
+    builtInWeapons:
+      - INV_NULL_3X3 #jumppack takes up backpack slot
+    scripts: #flight animation script
+      selectUnitSprite: |
+        # https://openxcom.org/forum/index.php/topic,4322.msg75634.html#msg75634
+        # and power pack for veterans/scions
+        var int temp;
+        var int walking;
+        var int floating;
+        var int isFemale;
+
+        var int numOfFrames;
+
+        unit.isWalking walking;
+        unit.isFloating floating;
+        unit.getGender isFemale;
+
+        set numOfFrames 6;
+
+
+        unit.getId temp;
+
+        add temp anim_frame;
+        mod temp numOfFrames;
+        mul temp 8;
+
+
+        if eq blit_part blit_torso; # if torso to be drawn
+            if and eq walking 0 eq floating 1;
+              set sprite_index 288; # position after female and flying legs (8+8 + some extra offset so it's multiple of 16)
+              add sprite_index temp;
+              if neq 0 isFemale;
+                # using isFemale differently for now;
+                set isFemale 8;
+                mul isFemale numOfFrames;
+                add sprite_index isFemale;
+              end;
+            end;
+        end;
+
+        add sprite_index sprite_offset; # add direction
+
+        return sprite_index;
+
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE
+    refNode: *STR_INQ_ARMOR_CARAPACE_STORMTROOPER
+    stats:
+      tu: -10 #Reduced time units; heavy armor
+      stamina: -10 #Reduced time units; heavy armor
+      bravery: 20 #Improved bravery; heavy armor + refractor shielding is pretty reassuring
+    frontArmor: 110 #+20 from heavier armor + shield
+    sideArmor: 100 #+20 from heavier armor + shield
+    rearArmor: 65 #+10 from heavier armor
+    underArmor: 70 #+20 from heavier armor
+    damageModifier: #GUARD ARMOR; better resists; heavier armor + shield
+      - 1.0 #none
+      - 0.8 #AP
+      - 0.8 #FLAMES
+      - 0.8 #HE
+      - 0.7 #LASCANON
+      - 0.7 #PLASMA
+      - 0.9 #STUN
+      - 0.7 #MELEE; has a shield
+      - 0.8 #ACID INQ prepped
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    specialWeapon: STR_INQ_MEDI_KIT
+    storeItem: STR_NONE
+    builtInWeapons:
+      - INV_NULL_MEDI_KIT
+      - STR_INQ_HELLPISTOL
+      - STR_INQ_SHIELD
+    tags: #100 SHIELD
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+
   - type: STR_DREAD_GK_ARMOR_UC
     visibilityAtDay: 40
     visibilityAtDark: 30
@@ -140,57 +278,283 @@ armors:
     refNode: *STR_GK_TAC
     antiCamouflageAtDay: 10
     antiCamouflageAtDark: 10
+    stats:
+      tu: 0
+      stamina: 10
+      health: 0
+      bravery: 0
+      reactions: 0
+      firing: -10
+      throwing: -10
+      strength: 0
+      melee: 5
+      psiStrength: 10
+      psiSkill: 10
+    builtInWeapons:
+      - STR_HOLOCAUST_TOME
+      - INV_NULL_3X3
+
 
   - type: STR_GK_LIB_LV2_UC
     refNode: *STR_GK_LIB
+    stats:
+      tu: 0
+      stamina: 20
+      health: 0
+      reactions: 0
+      firing: -10
+      throwing: -10
+      strength: 00
+      melee: 10
+      psiStrength: 20
+      psiSkill: 20
+    psiVision: 3 #gotta hug some walls, but potentially useful near doors and under ship overhangs
+    builtInWeapons:
+      - STR_HOLOCAUST_TOME
+      - INV_NULL_3X3
+
+
   - type: STR_GK_LIB_LV3_UC
     refNode: *STR_GK_LIB
+    stats:
+      tu: 0
+      stamina: 30
+      health: 0
+      bravery: 10
+      reactions: 0
+      firing: -10
+      throwing: -10
+      strength: 20
+      melee: 15
+      psiStrength: 30
+      psiSkill: 30
+    psiVision: 5 #gotta hug some walls, but potentially useful near doors and under ship overhangs
+    builtInWeapons:
+      - STR_PATCHSPEED
+      - STR_HOLOCAUST_TOME
+      - INV_NULL_3X3
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 12
 
-  - type: STR_GK_APO_ARMOR_UC
-    refNode: *STR_GK_TAC
-
-  - &STR_GK_TEC
-    type: STR_GK_TEC_LV1_UC
+  - type: STR_GK_APO_ARMOR_UC               #GREYKNIGHT ARMOR
     refNode: *STR_GK_TAC
     antiCamouflageAtDay: 5
     antiCamouflageAtDark: 5
     stats:
-       tu: 0
-       stamina: 50
-       health: 10
-       bravery: 0
-       reactions: -10
-       firing: 0
-       throwing: 10
-       strength: 25
-       melee: 10
-    rearArmor: 110
+      tu: -10
+      stamina: -10
+      health: 10
+      bravery: 10
+      reactions: 0
+      firing: 0
+      throwing: 0
+      strength: 0
+      melee: 0
+    units:
+      - STR_GK_LV2
 
-  - type: STR_GK_TEC_LV2_UC
-    refNode: *STR_GK_TEC
+  - &STR_GK_APO #Need to respecify all parameters in order for level scaling to work properly beyond Paladin/GK Level 4.
+    type: STR_GK_APO_LV2_UC
+    refNode: *STR_GK_TAC
+    selectUnitMale:     [{mod: 40k, index: 1276}, {mod: 40k, index: 1277}, {mod: 40k, index: 1278}, {mod: 40k, index: 1279}, {mod: 40k, index: 1280}]
+    selectUnitFemale:   [{mod: 40k, index: 1276}, {mod: 40k, index: 1277}, {mod: 40k, index: 1278}, {mod: 40k, index: 1279}, {mod: 40k, index: 1280}]
+    startMovingMale:    [{mod: 40k, index: 1271}, {mod: 40k, index: 1272}, {mod: 40k, index: 1273}, {mod: 40k, index: 1274}, {mod: 40k, index: 1275}]
+    startMovingFemale:  [{mod: 40k, index: 1271}, {mod: 40k, index: 1272}, {mod: 40k, index: 1273}, {mod: 40k, index: 1274}, {mod: 40k, index: 1275}]
+    selectWeaponMale:   [{mod: 40k, index: 1266}, {mod: 40k, index: 1267}, {mod: 40k, index: 1268}, {mod: 40k, index: 1269}, {mod: 40k, index: 1270}]
+    selectWeaponFemale: [{mod: 40k, index: 1266}, {mod: 40k, index: 1267}, {mod: 40k, index: 1268}, {mod: 40k, index: 1269}, {mod: 40k, index: 1270}]
+    annoyedMale:        [{mod: 40k, index: 1281}, {mod: 40k, index: 1282}, {mod: 40k, index: 1283}, {mod: 40k, index: 1284}, {mod: 40k, index: 1285}]
+    annoyedFemale:      [{mod: 40k, index: 1281}, {mod: 40k, index: 1282}, {mod: 40k, index: 1283}, {mod: 40k, index: 1284}, {mod: 40k, index: 1285}]
+    deathMale:     [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]
+    deathFemale:   [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]
+    spriteSheet: GKAPO.PCK
+    ufopediaType: STR_GK_APO_ARMOR_UC
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    zombiImmune: true
+    corpseBattle:
+      - STR_GK_ARMOR_CORPSE
+    storeItem: STR_GK_APO_ARMOR
+    corpseGeo: STR_FALLEN_CORPSE
+    stats:
+      tu: -10
+      stamina: -10
+      health: 20
+      bravery: 10
+      reactions: 0
+      firing: 0
+      throwing: 0
+      strength: 0
+      melee: 5
+    forcedTorso: 1
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_MEDI_KIT
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+    specialWeapon: STR_UNARMED_GAUNTLET_PLUS
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+    units:
+      - STR_GK_LV3
 
-  - type: STR_GK_TEC_LV3_UC
-    refNode: *STR_GK_TEC
+  - type: STR_GK_APO_LV3_UC
+    refNode: *STR_GK_APO
+    stats:
+      tu: -10
+      stamina: -10
+      health: 20
+      bravery: 20
+      reactions: 0
+      firing: 0
+      throwing: 0
+      strength: 0
+      melee: 10
+    builtInWeapons: #gains Advanced Narthecium
+      - INV_NULL_3X3
+      - AUX_MEDI_KIT_ADVANCED
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 15
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+    units:
+      - STR_GK_LV4
 
-  - type: STR_GK_CHP_UC
+  - type: STR_GK_APO_LV4_UC
+    refNode: *STR_GK_APO
+    stats:
+      tu: -10
+      stamina: -10
+      health: 30
+      bravery: 30
+      reactions: 0
+      firing: 0
+      throwing: 0
+      strength: 0
+      melee: 20
+    builtInWeapons: #gains Masterwork Narthecium
+      - INV_NULL_3X3
+      - AUX_MEDI_KIT_MC
+      - INV_NULL_2X1_RL
+      - INV_NULL_2X1_LL
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+    units:
+      - STR_GK_LV5
+
+  - type: STR_GK_TEC_LV1_UC               #GREYKNIGHT ARMOR
     refNode: *STR_GK_TAC
     antiCamouflageAtDay: 10
     antiCamouflageAtDark: 10
     stats:
-       tu: 10
-       stamina: 10
-       health: 20
-       bravery: 0
-       reactions: -10
-       firing: 0
-       throwing: 0
-       strength: 0
-       melee: 0
+      tu: 0
+      stamina: 50
+      health: 10
+      bravery: 0
+      reactions: -10
+      firing: 0
+      throwing: 10
+      strength: 25
+      melee: 10
+    rearArmor: 110
+    units:
+      - STR_GK_LV2
+
+  - &STR_GK_TEC #Need to respecify all parameters in order for level scaling to work properly beyond Paladin/GK Level 4.
+    type: STR_GK_TEC_LV2_UC
+    refNode: *STR_GK_TAC
+    selectUnitMale:     [{mod: 40k, index: 1296}, {mod: 40k, index: 1297}, {mod: 40k, index: 1298}, {mod: 40k, index: 1299}, {mod: 40k, index: 1300}]
+    selectUnitFemale:   [{mod: 40k, index: 1296}, {mod: 40k, index: 1297}, {mod: 40k, index: 1298}, {mod: 40k, index: 1299}, {mod: 40k, index: 1300}]
+    startMovingMale:    [{mod: 40k, index: 1291}, {mod: 40k, index: 1292}, {mod: 40k, index: 1293}, {mod: 40k, index: 1294}, {mod: 40k, index: 1295}]
+    startMovingFemale:  [{mod: 40k, index: 1291}, {mod: 40k, index: 1292}, {mod: 40k, index: 1293}, {mod: 40k, index: 1294}, {mod: 40k, index: 1295}]
+    selectWeaponMale:   [{mod: 40k, index: 1286}, {mod: 40k, index: 1287}, {mod: 40k, index: 1288}, {mod: 40k, index: 1289}, {mod: 40k, index: 1290}]
+    selectWeaponFemale: [{mod: 40k, index: 1286}, {mod: 40k, index: 1287}, {mod: 40k, index: 1288}, {mod: 40k, index: 1289}, {mod: 40k, index: 1290}]
+    annoyedMale:        [{mod: 40k, index: 1301}, {mod: 40k, index: 1302}, {mod: 40k, index: 1303}, {mod: 40k, index: 1304}, {mod: 40k, index: 1305}]
+    annoyedFemale:      [{mod: 40k, index: 1301}, {mod: 40k, index: 1302}, {mod: 40k, index: 1303}, {mod: 40k, index: 1304}, {mod: 40k, index: 1305}]
+    deathMale:     [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]
+    deathFemale:   [{mod: 40k, index: 380}, {mod: 40k, index: 381}, {mod: 40k, index: 382}, {mod: 40k, index: 383}, {mod: 40k, index: 384}]
+    spriteSheet: GKTEC.PCK
+    ufopediaType: STR_GK_TEC_LV1_UC
+    visibilityAtDay: 40
+    visibilityAtDark: 30
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    zombiImmune: true
+    corpseBattle:
+      - STR_GK_TEC_CORPSE
+    storeItem: STR_GK_TEC_ARMOR
+    corpseGeo: STR_FALLEN_CORPSE
+    stats:
+      tu: 0
+      stamina: 50
+      health: 10
+      bravery: 0
+      reactions: -10
+      firing: 0
+      throwing: 10
+      strength: 25
+      melee: 10
+    forcedTorso: 1
+    specialWeapon: AUX_PROBE
     units:
       - STR_GK_LV3
 
-  - &STR_GK_CHP
-    type: STR_GK_CHP_LVL2_UC
+  - type: STR_GK_TEC_LV3_UC
+    refNode: *STR_GK_TEC
+    units:
+      - STR_GK_LV4
+
+  - type: STR_GK_TEC_LV4_UC
+    refNode: *STR_GK_TEC
+    stats:
+      tu: 0
+      stamina: 80
+      health: 20
+      bravery: 0
+      reactions: -10
+      firing: 0
+      throwing: 20
+      strength: 40
+      melee: 20
+    tags:
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
+      ARMOR_ENERGY_SHIELD_DECAY: 10
+    specialWeapon: AUX_PROBE_ADVANCED #Captains get a super scouter
+    builtInWeapons: #need to readd this
+      - STR_TF_SPAWNER
+    units:
+      - STR_GK_LV5
+
+
+  - type: STR_GK_CHP_UC               #GREYKNIGHT ARMOR
+    refNode: *STR_GK_TAC
+    antiCamouflageAtDay: 10
+    antiCamouflageAtDark: 10
+    stats:
+      tu: 10
+      stamina: 10
+      health: 20
+      bravery: 0
+      reactions: -10
+      firing: 0
+      throwing: 0
+      strength: 0
+      melee: 0
+      psiSkill: 10
+    units:
+      - STR_GK_LV3
+    builtInWeapons:
+      - AUX_CROZIUS
+      - STR_GK_HB_MC
+      - INV_NULL_3X3
+
+  - &STR_GK_CHP #Need to respecify all parameters in order for level scaling to work properly beyond Paladin/GK Level 4.
+    type: STR_GK_CHP_LV2_UC
     refNode: *STR_GK_TAC
     selectUnitMale:     [{mod: 40k, index: 1256}, {mod: 40k, index: 1257}, {mod: 40k, index: 1258}, {mod: 40k, index: 1259}, {mod: 40k, index: 1260}]
     selectUnitFemale:   [{mod: 40k, index: 1256}, {mod: 40k, index: 1257}, {mod: 40k, index: 1258}, {mod: 40k, index: 1259}, {mod: 40k, index: 1260}]
@@ -214,46 +578,48 @@ armors:
     storeItem: STR_GK_CHP_ARMOR
     corpseGeo: STR_FALLEN_CORPSE
     stats:
-       tu: 10
-       stamina: 10
-       health: 20
-       bravery: 10
-       reactions: -10
-       firing: 0
-       throwing: 0
-       strength: 0
-       melee: 0
+      tu: 10
+      stamina: 10
+      health: 20
+      bravery: 10
+      reactions: -10
+      firing: 0
+      throwing: 0
+      strength: 0
+      melee: 0
+      psiSkill: 20
     forcedTorso: 1
     units:
       - STR_GK_LV4
     builtInWeapons:
-      - STR_GK_HB_MC
       - AUX_CROZIUS
+      - STR_GK_HB_MC
       - INV_NULL_3X3
     specialWeapon: STR_UNARMED_GAUNTLET_PLUS
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 10
       ARMOR_ENERGY_SHIELD_DECAY: 12
+    units:
+      - STR_GK_LV4
 
-
-  - type: STR_GK_CHP_LVL3_UC
+  - type: STR_GK_CHP_LV3_UC
     refNode: *STR_GK_CHP
     stats:
-       tu: 10
-       stamina: 10
-       health: 20
-       bravery: 20
-       reactions: -10
-       firing: 0
-       throwing: 0
-       strength: 0
-       melee: 0
+      tu: 10
+      stamina: 10
+      health: 20
+      bravery: 20
+      reactions: -10
+      firing: 0
+      throwing: 0
+      strength: 0
+      melee: 0
+      psiSkill: 30
     tags:
       ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20
       ARMOR_ENERGY_SHIELD_DECAY: 13
     units:
       - STR_GK_LV5
-      
 
   - type: STR_ELDAR_FARSEER_ARMOR      #SEER
     tags:
@@ -289,5 +655,14 @@ armors:
       - 1.0 #IMPACT
       - 1.0 #MELTA
     units:
-      - STR_ELDAR_FARSEER 
+      - STR_ELDAR_FARSEER
+    specialWeapon: STR_ELDAR_LIGHT_PLAYER #no snap shot Eldar psychic light with psi scaling
     loftempsSet: [ 3 ]
+
+  - type: THUNDERFIRE_ARMOR_P
+    builtInWeapons:
+      - STR_THUNDERFIRE_SHELL #comes with one reload; goes to the backpack
+      - INV_NULL_HAND_L
+      - INV_NULL_TF_LL
+      - INV_NULL_TF_RL
+      - INV_NULL_4X2

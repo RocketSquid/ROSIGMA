@@ -35,6 +35,9 @@ armors:
     tags:
       HAS_EXTENDED_FRONT_SHIELD: 1
 
+  - type: STR_INQ_STORMTROOPER_CARAPACE_ARMOR_MEDICAE
+    tags:
+      HAS_EXTENDED_FRONT_SHIELD: 1
 
 extended:
   tags:
@@ -61,8 +64,9 @@ extended:
 
 
   scripts:
-    statsForNerdsArmor: 
-      - offset: 22 
+    statsForNerdsArmor:
+      - new: ROSIGMA_sFNA_stats_for_nerds
+        offset: 22
         code: |
           var int temp1;
           var int temp2;
@@ -103,7 +107,8 @@ extended:
           return;
 
     statsForNerdsItem:
-      - offset: 22 
+      - new: ROSIGMA_sFNI_stats_for_nerds
+        offset: 22
         code: |
           var int temp;
           rule.getTag temp Tag.ITEM_RECOIL;
@@ -150,6 +155,6 @@ extended:
           if gt temp 0;
             stats_state.addIntRow "STR_GRAVPERCENTAGE" temp;
           end;
-          
+
 
           return;
