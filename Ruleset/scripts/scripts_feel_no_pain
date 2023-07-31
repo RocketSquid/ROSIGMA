@@ -9,6 +9,8 @@ extended:
       ITEM_BLESS_FEEL_NO_PAIN: int #Item feel no pain based on user's bravery
       ITEM_PAINKILLER_STRENGTH: int #Medikit grants feel no pain when administering painkillers
       ITEM_PAINKILLER_MAX_STRENGTH: int #Maximum feel no pain given by a specific medikit, regardless of how many painkillers you administer
+    RuleArmor:
+      ARMOR_FEEL_NO_PAIN_MIN: int #Minimum feel no pain from armor
 
   scripts:
     damageUnit:
@@ -61,10 +63,14 @@ extended:
            var int unitFaction;
            var int feelNoPain;
            var int feelNoPainMin;
+           var int temp
            unit.getFaction unitFaction;
+           unit.getRuleArmor unitArmor;
            if eq side unitFaction; # don't decrement on enemy turn
              unit.getTag feelNoPain Tag.FEEL_NO_PAIN_REDUCTION;
              unit.getTag feelNoPainMin Tag.FEEL_NO_PAIN_MIN;
+
+             
              sub feelNoPain 10;
              if lt feelNoPain feelNoPainMin;
                set feelNoPain feelNoPainMin;
@@ -72,16 +78,36 @@ extended:
              unit.setTag Tag.FEEL_NO_PAIN_REDUCTION feelNoPain;
            end;
            return;
-
+      createUnit:
+        - new: ROSIGMA_crUnit_feel_no_pain_armor
+          offset: 10
+          code: |
+            var int temp;
+            var int temp2;
+            var ptr RuleArmor unitArmor;
+            unit.getRuleArmor unitArmor;
+            unitArmor.getTag temp Tag.ARMOR_FEEL_NO_PAIN_MIN;
+            unit.getTag temp2 Tag.FEEL_NO_PAIN_MIN;
+            add temp2 temp;
+            unit.setTag Tag.FEEL_NO_PAIN_MIN temp2;
+            
+            unit.getTag temp2 Tag.FEEL_NO_PAIN;
+            add temp2 temp;
+            unit.setTag Tag.FEEL_NO_PAIN temp2;
       applySoldierBonuses:
         - new: ROSIGMA_aSB_bionics_feel_no_pain
           offset: 10
           code: |
             var int temp;
-
+            var int temp2;
+            unit.getTag temp2 Tag.FEEL_NO_PAIN_MIN;
             soldier_bonus.getTag temp Tag.BONUS_FEEL_NO_PAIN;
-            unit.setTag Tag.FEEL_NO_PAIN_MIN temp;
-            unit.setTag Tag.FEEL_NO_PAIN temp;
+            add temp2 temp;
+            unit.setTag Tag.FEEL_NO_PAIN_MIN temp2;
+            
+            unit.getTag temp2 Tag.FEEL_NO_PAIN;
+            add temp2 temp;
+            unit.setTag Tag.FEEL_NO_PAIN temp2;
 
             return;
 items:
