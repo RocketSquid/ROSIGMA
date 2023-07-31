@@ -45,6 +45,8 @@ extended:
               return;
             end;
             if eq medikit_action_type medikit_action_painkiller; #Only the painkiller grants feel no pain
+              item.getTag painkillerStrength Tag.ITEM_PAINKILLER_STRENGTH;
+              item.getTag painkillerMax Tag.ITEM_PAINKILLER_MAX_STRENGTH;
               add feelNoPain painkillerStrength;
               if gt feelNoPain painkillerMax; #Avoids overflow
                 set feelNoPain painkillerMax;
@@ -82,3 +84,33 @@ extended:
             unit.setTag Tag.FEEL_NO_PAIN temp;
 
             return;
+items:
+  - type: STR_GUARD_MEDI_KIT
+    tags:
+      ITEM_PAINKILLER_STRENGTH: 10
+      ITEM_PAINKILLER_MAX_STRENGTH: 50
+  - type: AUX_MEDICAE_MEDI_KIT
+    tags:
+      ITEM_PAINKILLER_STRENGTH: 10
+      ITEM_PAINKILLER_MAX_STRENGTH: 50
+  - type: AUX_MEDI_KIT #Space marine version
+    tags:
+      ITEM_PAINKILLER_STRENGTH: 10
+      ITEM_PAINKILLER_MAX_STRENGTH: 60
+  - type: STR_INQ_MEDI_KIT #Inquisition version
+    tags:
+      ITEM_PAINKILLER_STRENGTH: 10
+      ITEM_PAINKILLER_MAX_STRENGTH: 50
+  - type: AUX_ADEPTAS_MEDI_KIT #Hospitaller
+    tags:
+      ITEM_PAINKILLER_STRENGTH: 10
+      ITEM_PAINKILLER_MAX_STRENGTH: 50
+  - type: AUX_SERVITOR_KIT #Support servitor
+    tags:
+      ITEM_PAINKILLER_STRENGTH: 10
+      ITEM_PAINKILLER_MAX_STRENGTH: 50
+  - type: AUX_MEDI_KIT_MC #Grey Knights Version
+    tags:
+      ITEM_PAINKILLER_STRENGTH: 15
+      ITEM_PAINKILLER_MAX_STRENGTH: 70
+
