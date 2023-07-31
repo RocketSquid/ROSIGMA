@@ -5,6 +5,7 @@ extended:
     BattleUnit: 
       FEEL_NO_PAIN_REDUCTION: int #Percentage of incoming damage that can be reduced by feel no pain
       FEEL_NO_PAIN_MIN: int #Percentage of feel no pain damage reduction that the unit always has
+      FEEL_NO_PAIN_TALLY: int #Total damage that has been prevented by feel no pain, minus the amount that has been healed.
     RuleItem:
       ITEM_BLESS_FEEL_NO_PAIN: int #Item feel no pain based on user's bravery
       ITEM_PAINKILLER_STRENGTH: int #Medikit grants feel no pain when administering painkillers
@@ -42,7 +43,9 @@ extended:
             var int feelNoPain;
             var int painkillerStrength;
             var int painkillerMax;
+            var int feelNoPainTally;
             target.getTag feelNoPain Tag.FEEL_NO_PAIN_REDUCTION;
+            target.getTag feelNoPainTally Tag.FEEL_NO_PAIN_TALLY;
             if gt feelNoPain painkillerMax; #If target has feel no pain from another source which is higher than what the medikit can do, do nothing
               return;
             end;
@@ -55,6 +58,12 @@ extended:
               end;
               target.setTag Tag.FEEL_NO_PAIN_REDUCTION feelNoPain;
             end;
+            if eq medikit_action_type medikit_action_heal;
+              sub feelNoPainTally health_recovery;
+              if lt feelNoPainTally 0;
+                set feelNoPainTally 0;
+              end;
+              target.setTag Tag.FEEL_NO_PAIN_TALLY feelNoPainTally;
             return;
       newTurnUnit: 
         - new: ROSIGMA_nTU_feel_no_pain:
@@ -94,6 +103,7 @@ extended:
             unit.getTag temp2 Tag.FEEL_NO_PAIN;
             add temp2 temp;
             unit.setTag Tag.FEEL_NO_PAIN temp2;
+            unit.setTag Tag.FEEL_NO_PAIN_TALLY 0;
       applySoldierBonuses:
         - new: ROSIGMA_aSB_bionics_feel_no_pain
           offset: 10
