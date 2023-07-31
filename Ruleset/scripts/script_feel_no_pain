@@ -1,0 +1,70 @@
+extended:
+  tags:
+    BattleUnit: 
+      FEEL_NO_PAIN_REDUCTION: int #Percentage of incoming damage that can be reduced by feel no pain
+      FEEL_NO_PAIN_MIN: int #Percentage of feel no pain damage reduction that the unit always has
+    RuleItem:
+      ITEM_BLESS_FEEL_NO_PAIN: int #Item feel no pain based on user's bravery
+      ITEM_PAINKILLER_STRENGTH: int #Medikit grants feel no pain when administering painkillers
+      ITEM_PAINKILLER_MAX_STRENGTH: int #Maximum feel no pain given by a specific medikit, regardless of how many painkillers you administer
+
+  scripts:
+    damageUnit:
+      - new: ROSIGMA_dU_feel_no_pain
+        offset: 1
+        code: |
+          var int temp;
+          var int feelNoPain;
+          var int maxHealth;
+          unit.getTag feelNoPain Tag.FEEL_NO_PAIN_REDUCTION;
+          unit.getHealthMax maxHealth;
+          if gt feelNoPain 0; #Unit has no feel no pain reduction
+            return;
+          end;
+          if ge to_health maxHealth; #Damage greater than max health completely ignores feel no pain
+            return;
+          end;
+          set temp to_health;
+          muldiv temp feelNoPain 100;
+          sub to_health temp;
+          div temp 5;
+          add to_wound temp;
+          return;
+      healUnit:
+        - new: ROSIGMA_healU_painkiller
+          offset: 1
+          code: |
+            var int temp;
+            var int feelNoPain;
+            var int painkillerStrength;
+            var int painkillerMax;
+            target.getTag feelNoPain Tag.FEEL_NO_PAIN_REDUCTION;
+            if gt feelNoPain painkillerMax; #If target has feel no pain from another source which is higher than what the medikit can do, do nothing
+              return;
+            end;
+            if eq medikit_action_type medikit_action_painkiller; #Only the painkiller grants feel no pain
+              add feelNoPain painkillerStrength;
+              if gt feelNoPain painkillerMax; #Avoids overflow
+                set feelNoPain painkillerMax;
+              end;
+              target.setTag Tag.FEEL_NO_PAIN_REDUCTION feelNoPain;
+            end;
+            return;
+      newTurnUnit: 
+        - new: ROSIGMA_nTU_feel_no_pain:
+          offset: 1
+          code: |
+           var int unitFaction;
+           var int feelNoPain;
+           var int feelNoPainMin;
+           unit.getFaction unitFaction;
+           if eq side unitFaction; # don't decrement on enemy turn
+             unit.getTag feelNoPain Tag.FEEL_NO_PAIN_REDUCTION;
+             unit.getTag feelNoPainMin Tag.FEEL_NO_PAIN_MIN;
+             sub feelNoPain 10;
+             if lt feelNoPain feelNoPainMin;
+               set feelNoPain feelNoPainMin;
+             end;
+             unit.setTag Tag.FEEL_NO_PAIN_REDUCTION feelNoPain;
+           end;
+           return;
