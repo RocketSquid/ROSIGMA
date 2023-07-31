@@ -1,5 +1,7 @@
 extended:
   tags:
+    RuleSoldierBonus:
+      BONUS_FEEL_NO_PAIN: int
     BattleUnit: 
       FEEL_NO_PAIN_REDUCTION: int #Percentage of incoming damage that can be reduced by feel no pain
       FEEL_NO_PAIN_MIN: int #Percentage of feel no pain damage reduction that the unit always has
@@ -68,3 +70,15 @@ extended:
              unit.setTag Tag.FEEL_NO_PAIN_REDUCTION feelNoPain;
            end;
            return;
+
+      applySoldierBonuses:
+        - new: ROSIGMA_aSB_bionics_feel_no_pain
+          offset: 10
+          code: |
+            var int temp;
+
+            soldier_bonus.getTag temp Tag.BONUS_FEEL_NO_PAIN;
+            unit.setTag Tag.FEEL_NO_PAIN_MIN temp;
+            unit.setTag Tag.FEEL_NO_PAIN temp;
+
+            return;
