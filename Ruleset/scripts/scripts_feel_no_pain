@@ -137,16 +137,36 @@ extended:
         - new: ROSIGMA_rFMU_accumulated_damage
           offset: 10
           code: |
-            var int accumulatedDamage
-
+            var int accumulatedDamage;
+            var int temp;
             unit.getTag accumulatedDamage Tag.FEEL_NO_PAIN_TALLY;
           # debug_log "recovery_time old" recovery_time;
 
+            unit.getHealthMax temp;
+            mul temp 2;
+            
+            add recovery_time accumulatedDamage;
+            if ge accumulatedDamage temp;
+              mul temp -1;
+              unit.addHealthWithOverkill temp;
+            end;
+            return;
+      recolorUnitSprite:
+        - new: ROSIGMA_rUS_feelNoPain
+          offset: 22 # change unit color to red to indicate accumulated wounds are fatal
+          code: |
+            var int accumulatedDamage;
+            var int temp;
+            unit.getTag accumulatedDamage Tag.FEEL_NO_PAIN_TALLY;
 
-          add recovery_time accumulatedDamage;
+            unit.getHealthMax temp;
+            mul temp 2;
+            
+            if ge accumulatedDamage temp;
+              set_color new_pixel COLOR_X1_RED0;
+            end;
 
-
-          return;
+            return new_pixel;
 items:
   - type: STR_GUARD_MEDI_KIT
     tags:
