@@ -65,6 +65,15 @@ extended:
               end;
               target.setTag Tag.FEEL_NO_PAIN_TALLY feelNoPainTally;
             return;
+      - new: ROSIGMA_healU_remove_accumulated
+        offset: 20
+        code: |
+          var int temp;
+
+          target.getTag temp Tag.FEEL_NO_PAIN_TALLY;
+          sub temp health_recovery;
+          target.setTag Tag.FEEL_NO_PAIN_TALLY temp;
+          return;
       newTurnUnit: 
         - new: ROSIGMA_nTU_feel_no_pain:
           offset: 1
@@ -72,7 +81,8 @@ extended:
            var int unitFaction;
            var int feelNoPain;
            var int feelNoPainMin;
-           var int temp
+           var int temp;
+           var int feelNoPainTally;
            unit.getFaction unitFaction;
            unit.getRuleArmor unitArmor;
            if eq side unitFaction; # don't decrement on enemy turn
@@ -85,7 +95,9 @@ extended:
                set feelNoPain feelNoPainMin;
              end;
              unit.setTag Tag.FEEL_NO_PAIN_REDUCTION feelNoPain;
+             if 
            end;
+      
            return;
       createUnit:
         - new: ROSIGMA_crUnit_feel_no_pain_armor
@@ -120,6 +132,21 @@ extended:
             unit.setTag Tag.FEEL_NO_PAIN temp2;
 
             return;
+      returnFromMissionUnit: 
+
+        - new: ROSIGMA_rFMU_accumulated_damage
+          offset: 10
+          code: |
+            var int accumulatedDamage
+
+            unit.getTag accumulatedDamage Tag.FEEL_NO_PAIN_TALLY;
+          # debug_log "recovery_time old" recovery_time;
+
+
+          add recovery_time accumulatedDamage;
+
+
+          return;
 items:
   - type: STR_GUARD_MEDI_KIT
     tags:
