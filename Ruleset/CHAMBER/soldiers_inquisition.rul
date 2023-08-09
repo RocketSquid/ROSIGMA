@@ -229,3 +229,76 @@ soldiers:
     rankSprite: {mod: 40k, index: 850}
     rankBattleSprite: {mod: 40k, index: 233}
     rankTinySprite: {mod: 40k, index: 115}
+
+  - type: STR_GANGER
+    requires:
+      - STR_GANGER_RECRUITMENT
+    #costBuy: 15000
+    costSalary: 5000
+    minStats:
+      tu: 50 #Guardsman 40
+      stamina: 40
+      health: 25
+      bravery: 20
+      reactions: 50 #Guardsman 30
+      firing: 40
+      throwing: 35
+      strength: 10
+      psiStrength: 0
+      psiSkill: 0
+      melee: 20
+    maxStats:
+      tu: 70 #Guardsman 60
+      stamina: 70
+      health: 40
+      bravery: 50 #Guardsman 60, kinda cowardly
+      reactions: 70 #Guardsman 60
+      firing: 70 #Not better shots than guardsmen
+      throwing: 65
+      strength: 25
+      psiStrength: 100
+      psiSkill: 6
+      melee: 60
+    statCaps:
+      tu: 85 #Guardsman 75 
+      stamina: 90
+      health: 55 
+      bravery: 90 # guardsman 110
+      reactions: 90 #same as felinid, guardsman 80
+      firing: 100 # was 100
+      throwing: 70
+      strength: 65 # was 60
+      psiStrength: 100
+      psiSkill: 50
+      melee: 90
+    trainingStatCaps:
+      tu: 60
+      stamina: 70
+      health: 30
+      firing: 70
+      throwing: 65
+      strength: 30
+      psiStrength: 100
+      psiSkill: 50
+      melee: 50
+    armor: STR_HIVE_LEATHERS
+    rankSprite: {mod: 40k, index: 1000}
+    rankBattleSprite: {mod: 40k, index: 1000}
+    rankTinySprite: {mod: 40k, index: 1000}
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 50
+    avatarOffsetX: 66
+    avatarOffsetY: 42
+    soldierNames:
+      - delete
+      - GuardName/
+    deathMale: [{mod: 40k, index: 41}, {mod: 40k, index: 42}, {mod: 40k, index: 43}]
+    deathFemale: [{mod: 40k, index: 44}, {mod: 40k, index: 45}, {mod: 40k, index: 46}]
+    rankStrings: #Change this
+      - STR_GUARD_RANK_0
+      - STR_GUARD_RANK_1
+      - STR_GUARD_RANK_2
+      - STR_GUARD_RANK_3
+    value: 8
+    moraleLossWhenKilled: 60 #Ganger scum
