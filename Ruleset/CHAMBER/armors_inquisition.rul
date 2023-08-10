@@ -265,4 +265,144 @@ armors:
       - 0.0 #SMOKE
       - 1.0 #IMPACT
       - 1.0 #MELTA
+
+  - type: STR_TECH_ADEPT
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 2
+    antiCamouflageAtDark: 2
+    heatVision: 20
+    frontArmor: 70 #Carapace, the mechanicus looks out for its own
+    sideArmor: 60
+    rearArmor: 40
+    underArmor: 40
+    storeItem: STR_NONE
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.0 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.1 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    stats:
+       bravery: 10 #always multiples of 10
+    weight: 15
+    specialWeapon: STR_MECHADENDRITE
+    builtInWeapons:
+      - INV_NULL_3X3 #Robes do not come with backpacks
+    tags:
+      INFECTION_RESIST: 50 #infection resistant, bionics
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 4 
+      ARMOR_ENERGY_SHIELD_DECAY: 10 #40 shield, but it regens very slowly
+
+  - type: STR_TECH_ADEPT_GENETOR
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 2
+    antiCamouflageAtDark: 2
+    heatVision: 20
+    frontArmor: 70 #Carapace, the mechanicus looks out for its own
+    sideArmor: 60
+    rearArmor: 40
+    underArmor: 40
+    storeItem: STR_NONE
+    damageModifier: #GUARD ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 1.0 #FLAMES
+      - 1.0 #HE
+      - 0.8 #LASCANON
+      - 1.0 #PLASMA
+      - 1.0 #STUN
+      - 1.1 #MELEE
+      - 1.0 #ACID
+      - 0.0 #SMOKE
+      - 1.0 #IMPACT
+      - 1.0 #MELTA
+    stats:
+       bravery: 10 #always multiples of 10
+       health: 20 #Genetors are assumed to have optimized their biology somewhat
+    weight: 15
+    specialWeapon: STR_MECHADENDRITE
+    builtInWeapons:
+      - INV_NULL_3X3
+      - AUX_SERVITOR_KIT
+    tags:
+      INFECTION_RESIST: 50 #infection resistant, bionics
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 4 
+      ARMOR_ENERGY_SHIELD_DECAY: 10 #40 shield, but it regens very slowly
+
+  - &STR_TECHPRIEST_ARMOR #Armor, shield, omnissian axe
+    type: STR_TECHPRIEST
+    visibilityAtDay: 40
+    visibilityAtDark: 25
+    antiCamouflageAtDay: 5
+    antiCamouflageAtDark: 5
+    heatVision: 40
+    storeItem: STR_NONE
+    frontArmor: 100 #On par with sisters power armor
+    sideArmor: 90
+    rearArmor: 55
+    underArmor: 50
+    damageModifier: #HAZARD ARMOR
+      - 1.0 #none
+      - 1.0 #AP
+      - 0.7 #FLAMES
+      - 0.8 #HE
+      - 0.8 #LASCANON
+      - 0.6 #PLASMA
+      - 0.8 #STUN
+      - 1.1 #MELEE
+      - 0.3 #ACID
+      - 0.0 #SMOKE
+      - 0.5 #IMPACT
+      - 0.7 #MELTA
+    weight: 15
+    specialWeapon: STR_MECHADENDRITE_IMPROVED
+    builtInWeapons:
+      - INV_NULL_3X3
+    tags:
+      INFECTION_RESIST: 50 #infection resistant, bionics
+      ARMOR_ENERGY_SHIELD_HP_PER_TURN: 20 
+      ARMOR_ENERGY_SHIELD_DECAY: 25 #80 shield, it regens fairly fast
+
+  - type: STR_TECHPRIEST
+    builtInWeapons: !add
+      - STR_OMNISSIAN_AXE
+  - type: STR_TECHPRIEST_GENETOR
+    refNode: *STR_TECHPRIEST_ARMOR
+    stats:
+      health: 40
+    specialWeapon: STR_MECHADENDRITE_MEDICAE
+
+  
+  - type: STR_TECHPRIEST_MYRMIDON
+    refNode: *STR_TECHPRIEST_ARMOR
+    stats:
+      strength: 40 #Machinator array
+    builtInWeapons: !add
+      - STR_CONVERSION_BEAMER
+    specialWeapon: STR_MACHINATOR_ARRAY
+
+  - type: STR_TECHPRIEST_ENGINSEER
+    refNode: *STR_TECHPRIEST_ARMOR
+    frontArmor: 125 #Full-on power armor
+    sideArmor: 120
+    rearArmor: 80
+    underArmor: 100
+    specialWeapon: STR_ENGINSEER_SERVO_ARM
+
+  
+  - type: STR_TECHPRIEST_XENARITE
+    refNode: *STR_TECHPRIEST_ARMOR
+    builtInWeapons: !add
+      - STR_XENARITE_BLASTER
+
+      
    
