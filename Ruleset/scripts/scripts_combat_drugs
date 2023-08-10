@@ -1,0 +1,70 @@
+extended:
+  tags:
+    RuleItem:
+      COMBAT_DRUG_STRENGTH: int #Buff applied to stats by combat drugs on use. For some stats this is divided by 2.
+    RuleSoldier:
+      CHEM_TOLERANCE: int #Withdrawal symptoms are reduced by this percentage
+    BattleUnit:
+      SLAUGHT_DOSAGE: int #Amount of slaught in the target's system. 
+      FRENZON_DOSAGE: int #Amount of frenzon in the target's system.
+      FRENZON_SAVED_BRAVERY: int #Bravery before soldier took frenzon, used for when it wears off
+      SATROPHINE_DOSAGE: int #Amount of satrophine in the target's system
+  scripts:
+    healUnit:
+      - new: ROSIGMA_healU_combat_drugs
+        offset: 20
+        code: |
+          var int temp;
+          var int drugStrength;
+          item.getTag drugStrength Tag.COMBAT_DRUG_STRENGTH;
+          if gt drugStrength 0;
+            if eq medikit_action_type medikit_action_heal; #Slaught, boosts time units and reactions
+              target.AddTimeUnits drugStrength;
+              target.Stats.AddReactions drugStrength;
+              target.getTag temp Tag.SLAUGHT_DOSAGE;
+              add temp drugStrength;
+              target.setTag Tag.SLAUGHT_DOSAGE temp;
+            end;
+            if eq medikit_action_type medikit_action_stimulant; #Frenzon, boosts energy above usual levels and causes fearlessness
+              target.Stats.getBravery temp;
+              target.setTag Tag.FRENZON_SAVED_BRAVERY temp;
+              target.Stats.setBravery 110; #Soldier becomes immune to fear
+              target.addEnergy drugStrength; 
+              target.getTag temp Tag.FRENZON_DOSAGE;
+              add temp drugStrength;
+              target.setTag Tag.FRENZON_DOSAGE temp;
+            end;
+            if eq medikit_action_type medikit_action_painkiller; #Satrophine, boosts strength+gives lots of feel no pain, feel no pain handled in its own script
+              div drugStrength 2;
+              target.Stats.addStrength drugStrength;
+              target.getTag temp Tag.SATROPHINE_DOSAGE;
+              add temp drugStrength;
+              target.setTag Tag.SATROPHINE_DOSAGE temp;
+            end;
+          end;
+          return;
+        
+    newTurnUnit:          
+      - new: ROSIGMA_nTU_combat_drug_withdrawal
+        offset: 20
+        code: |
+          var int temp1;
+          var int temp2;
+          var int tolerance;
+          var int frenzon;
+          var int slaught;
+          var int satrophine;
+          var int faction;
+          var int factionturn;
+          var int currentTurn;
+          unit.getFaction faction;
+          battle_game.getTurnSide factionturn;
+
+          battle_game.getTurn currentTurn;
+          if and eq faction FACTION_PLAYER eq factionturn FACTION_PLAYER;
+            unit.getTag frenzon Tag.FRENZON_DOSAGE;
+            unit.getTag slaught Tag.SLAUGHT_DOSAGE;
+            unit.getTag satrophine Tag.SATROPHINE_DOSAGE;
+            
+          
+          
