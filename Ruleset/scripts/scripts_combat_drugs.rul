@@ -65,6 +65,7 @@ extended:
             unit.getTag frenzon Tag.FRENZON_DOSAGE;
             unit.getTag slaught Tag.SLAUGHT_DOSAGE;
             unit.getTag satrophine Tag.SATROPHINE_DOSAGE;
+            unit.getTag tolerance Tag.CHEM_TOLERANCE;
             
           
           
