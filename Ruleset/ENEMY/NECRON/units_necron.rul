@@ -34,8 +34,9 @@ units:
       - - STR_GAUSS_FLAYER
         - STR_KILLPOINT_TOKEN_10
       - - STR_GAUSS_FLAYER
+        - STR_NECRON_SCARAB_SPAWNER_GRENADE
         - STR_KILLPOINT_TOKEN_10
-      - - STR_GAUSS_FLAYER
+      - - STR_GAUSS_REAPER
         - STR_NECRON_SCARAB_SPAWNER_GRENADE
         - STR_KILLPOINT_TOKEN_10
 
@@ -70,6 +71,7 @@ units:
     builtInWeaponSets:
       - - STR_GAUSS_FLAYER
       - - STR_GAUSS_FLAYER
+        - STR_NECRON_SCARAB_SPAWNER_GRENADE
       - - STR_GAUSS_FLAYER
         - STR_NECRON_SCARAB_SPAWNER_GRENADE
 
@@ -79,13 +81,13 @@ units:
       stamina: 96
       health: 80
       bravery: 110
-      reactions: 60
-      firing: 85
-      throwing: 80
+      reactions: 75
+      firing: 90
+      throwing: 85
       strength: 60
       psiStrength: 200
       psiSkill: 0
-      melee: 65
+      melee: 85
     sniper: 40
     spotter: 1
     value: 15
@@ -575,6 +577,8 @@ armors:
     heatVision: 90 #smoke is only a minor impairment to Deathmark snipers
     antiCamouflageAtDark: 15
     antiCamouflageAtDay: 15
+    camouflageAtDark: -15 #blends in to the dark
+    camouflageAtDay: -10 #largely because it's a deep strike unit that can't just phase in wherever
     overKill: 0.4
     recovery: #Living metal rapidly regenerates health
       health:
@@ -586,6 +590,8 @@ armors:
     heatVision: 90 #smoke is only a minor impairment to Deathmark snipers
     antiCamouflageAtDark: 15
     antiCamouflageAtDay: 15
+    camouflageAtDark: -15 #blends in to the dark
+    camouflageAtDay: -10 #largely because it's a deep strike unit that can't just phase in wherever
     bleedImmune: true
     fearImmune: true
     painImmune: true
