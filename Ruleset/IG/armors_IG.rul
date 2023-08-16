@@ -2014,9 +2014,28 @@ armors:
     units:
       - STR_PENITENT_GUARD
 
+  - &STR_GUARD_ARMOR_COMBAT_DRUG #Stats+Recovery+specialWeapon
+    type: STR_GUARD_CHEM_DOG # Chem dog armor is the basic combat drug equipped armor.
+    stats:
+       tu: 100 #Slaught can temporarily elevate a human beyond normal levels.
+       stamina: 90 #Frenzon, a powerful stimulant, allows soldiers to fight until they collapse. Not 100, since that becomes buggy.
+       bravery: 40 #Frenzon also induces feelings of fearlessness
+    recovery:
+      time: #TU only regenerates up to a value of the base TU - 10
+        flatHundred: -1.1
+        tuCurrent: -1.0
+        tu: 1.0
+      energy: #Energy regeneration is more complicated. Will end up looking like proportional control, and as-is will be strictly slower than normal. I will look into making it polynomial to see if that helps.
+        stamina: 0.33
+        energyCurrent: -0.33
+        flatHundred: -0.3
+      stun: #May reduce stun recovery to make the disadvantage of slaught more severe. Would use normalizedStun for that
+        flatOne: 1.0
+    specialWeapon: STR_CHEM_INHALER #Specialized medikit
+
   - type: STR_GUARD_CHEM_DOG
     spriteSheet: CHEM_DOG.PCK
-    customArmorPreviewIndex: {mod: 40k, index: 52}
+    customArmorPreviewIndex: 87
     corpseBattle:
       - STR_PENAL_CORPSE
     storeItem: STR_CHEM_DOG_ARMOR
@@ -2028,15 +2047,13 @@ armors:
 
     refNode: *STR_GUARD_ARMOR_FLAK_DAMAGE
 
-    stats:
-       bravery: 10
-    specialWeapon: STR_CHEM_INHALER
+
     units:
-      - STR_PENITENT_GUARD
+      - STR_PENITENT_GUARD #Currently an alternate armor for penitents. Might decide to make chem-dogs their own soldier type later
 
   - type: STR_VETERAN_CHEM_DOG
-    spriteSheet: CHEM_DOG.PCK
-    customArmorPreviewIndex: {mod: 40k, index: 52}
+    spriteSheet: CHEM_DOG_VET.PCK
+    customArmorPreviewIndex: 88
     corpseBattle:
       - STR_PENAL_CORPSE
     storeItem: STR_NONE
@@ -2047,12 +2064,9 @@ armors:
     loftempsSet: [ 3 ]
 
     refNode: *STR_GUARD_ARMOR_CARAPACE_DAMAGE
-
-    stats:
-       bravery: 10
-    specialWeapon: STR_CHEM_INHALER
+    refNode: *STR_GUARD_ARMOR_COMBAT_DRUG
     units:
-      - STR_HARDENED_CRIMINAL
+      - STR_HARDENED_CRIMINAL #Chem-dog veteran
 
   - type: STR_GUARD_ARMORS_PRIEST_UC
     antiCamouflageAtDay: 2
