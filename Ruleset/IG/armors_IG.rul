@@ -2017,13 +2017,15 @@ armors:
   - &STR_GUARD_ARMOR_COMBAT_DRUG #Stats+Recovery+specialWeapon
     type: STR_GUARD_CHEM_DOG # Chem dog armor is the basic combat drug equipped armor.
     stats:
-       tu: 100 #Slaught can temporarily elevate a human beyond normal levels.
+       tu: 50 #Slaught can temporarily elevate a human beyond normal levels. 
        stamina: 90 #Frenzon, a powerful stimulant, allows soldiers to fight until they collapse. Not 100, since that becomes buggy.
        bravery: 40 #Frenzon also induces feelings of fearlessness
+       firing: 15 #Chem-dogs are full penal soldiers, and have better aim than basic penitents.
     recovery:
-      time: #TU only regenerates up to a value of the base TU - 10
-        flatHundred: -1.1
-        tuCurrent: -1.0
+      time: #New method: If TU is empty, it refills by an amount equal to the unmodified TU. If you immediately hit end turn again, it would refill by half the unmodified TU. The following turn, 1/4, and so on.
+        #Original method: TU only regenerates up to a value of the base TU - 10. Since guns (and some melee) uses %TU instead of flat, using any guns becomes a chore. At the same time chem dogs also have extremely ready access to stims.
+        flatHundred: -0.5
+        tuCurrent: -0.5
         tu: 1.0
       energy: #Energy regeneration is more complicated. Will end up looking like proportional control, and as-is will be strictly slower than normal. I will look into making it polynomial to see if that helps.
         stamina: 0.33
