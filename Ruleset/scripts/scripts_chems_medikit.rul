@@ -22,7 +22,7 @@ items:
     flatRate: true
     recover: false
     tags:
-      SLAUGHT_STRENGTH: 20
+      SLAUGHT_STRENGTH: 20 #A rookie commissar's inspire would restore roughly twice this. A veteran commissar, probably more like 3x this. This seems roughly balanced for now.
       FRENZON_STRENGTH: 50 
     scripts:
       healUnit: |
