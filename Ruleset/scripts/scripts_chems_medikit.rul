@@ -1,1 +1,42 @@
-
+extended:
+  tags:
+    RuleItem:
+      SLAUGHT_STRENGTH: int #TU given by slaught (heal)
+      FRENZON_STRENGTH: int #Morale given by frenzon (stimulant)
+items:
+  - &STR_COMBAT_DRUGS
+    type: STR_CHEM_INHALER
+    medikitActionName: STR_COMBAT_DRUGS
+    medikitTargetMatrix: 0
+    weight: 0
+    battleType: 6
+    painKiller: 30
+    heal: 20 #Slaught is the strongest drug, and thus the lowest amount
+    stimulant: 30
+    woundRecovery: 0
+    healthRecovery: 4 #This is used to represent the stun cost of slaught; slaught does not restore health
+    stunRecovery: 4
+    energyRecovery: 20 #Frenzon is a hardcore stimulant
+    tuUse: 0
+    medikitTargetSelf: true
+    flatRate: true
+    recover: false
+    tags:
+      SLAUGHT_STRENGTH: 20
+      FRENZON_STRENGTH: 50 
+    scripts:
+      healUnit: |
+        var int temp;
+        if eq medikit_action_type medikit_action_heal; #slaught
+          item.getTag temp Tag.SLAUGHT_STRENGTH;
+          target.AddTimeUnits temp;
+          target.AddStun health_recovery;
+          set health_recovery 0;
+        end;
+        if eq medikit_action_type medikit_action_stimulant; #Frenzon
+          item.getTag temp Tag.FRENZON_STRENGTH;
+          target.AddMorale temp; 
+        end;
+        return;
+          
+        
